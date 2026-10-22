@@ -34,6 +34,20 @@ export interface ReportMetadata {
   lab_name?: string | null;
 }
 
+export interface AssociatedCondition {
+  id: string;
+  condition_name: string;
+  category: string;
+  severity_level?: string;
+  match_level: string; // 'High Correlation' | 'Moderate Correlation' | 'Possible Consideration'
+  match_score: number;
+  matching_biomarkers: string[];
+  matching_symptoms: string[];
+  overview: string;
+  suggested_follow_up_tests: string[];
+  doctor_discussion_points: string[];
+}
+
 export interface ReportSummary {
   total_parameters: intNumber;
   within_range_count: intNumber;
@@ -42,6 +56,7 @@ export interface ReportSummary {
   needs_review_count: intNumber;
   affected_parameters: string[];
   patient_symptoms?: string[];
+  associated_conditions?: AssociatedCondition[];
   overall_outcome: OverallOutcome;
   overall_title: string;
   overall_message: string;

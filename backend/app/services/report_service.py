@@ -286,6 +286,25 @@ class ReportService:
             elements.append(symptom_table)
             elements.append(Spacer(1, 12))
 
+        # Potential Clinical Conditions Correlated for Physician Review
+        if analysis.summary.associated_conditions and len(analysis.summary.associated_conditions) > 0:
+            elements.append(Paragraph("<b>Potential Clinical Condition Associations (For Doctor Consultation)</b>", section_heading))
+            elements.append(Paragraph(
+                "Based on the pattern of out-of-range biomarkers, the following differentials and confirmatory tests are suggested to discuss with your healthcare professional:",
+                body_style
+            ))
+            elements.append(Spacer(1, 4))
+            for cond in analysis.summary.associated_conditions[:3]:
+                safe_cond = html.escape(cond.condition_name)
+                safe_level = html.escape(cond.match_level)
+                safe_overview = html.escape(cond.overview)
+                tests_str = ", ".join([html.escape(t) for t in cond.suggested_follow_up_tests[:3]])
+                elements.append(Paragraph(f"• <b>{safe_cond}</b> ({safe_level} - {cond.match_score}%): {safe_overview}", body_style))
+                if tests_str:
+                    elements.append(Paragraph(f"&nbsp;&nbsp;&nbsp;&nbsp;<i>Suggested Doctor Follow-up Tests:</i> {tests_str}", body_style))
+                elements.append(Spacer(1, 4))
+            elements.append(Spacer(1, 10))
+
         # Medical Disclaimer
         elements.append(HRFlowable(width="100%", thickness=0.8, color=colors.HexColor("#CBD5E1"), spaceAfter=8))
         elements.append(Paragraph(

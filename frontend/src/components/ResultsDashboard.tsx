@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   FileText, Download, RotateCcw, CheckCircle2, 
   ArrowDownCircle, ArrowUpCircle, AlertCircle, Edit3,
   Calendar, User, Building, FileSpreadsheet, Sparkles
 } from 'lucide-react';
-import { AnalysisResponse, BloodTestItem, ReportMetadata } from '../types';
+import { AnalysisResponse, BloodTestItem, ReportMetadata, AssociatedCondition } from '../types';
 import { OverallResultBanner } from './OverallResultBanner';
 import { ParameterTable } from './ParameterTable';
 import { ParameterDetailModal } from './ParameterDetailModal';
@@ -12,6 +12,8 @@ import { ExplanationsSection } from './ExplanationsSection';
 import { VerificationModal } from './VerificationModal';
 import { MedicalDisclaimer } from './MedicalDisclaimer';
 import { SymptomsChecklist } from './SymptomsChecklist';
+import { AssociatedConditionsSection } from './AssociatedConditionsSection';
+import { correlateConditions } from '../services/api';
 
 interface ResultsDashboardProps {
   analysis: AnalysisResponse;
@@ -32,8 +34,26 @@ export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
 }) => {
   const [selectedParam, setSelectedParam] = useState<BloodTestItem | null>(null);
   const [isVerificationOpen, setIsVerificationOpen] = useState(analysis.has_uncertain_values);
+  const [conditions, setConditions] = useState<AssociatedCondition[]>(analysis.summary.associated_conditions || []);
+  const [isCorrelating, setIsCorrelating] = useState<boolean>(false);
+
+  useEffect(() => {
+    setConditions(analysis.summary.associated_conditions || []);
+  }, [analysis.summary.associated_conditions]);
 
   const { metadata, summary, parameters } = analysis;
+
+  const handleSymptomsChange = async (selected: string[]) => {
+    try {
+      setIsCorrelating(true);
+      const updated = await correlateConditions(parameters, selected);
+      setConditions(updated);
+    } catch (err) {
+      console.error('Failed to update condition correlation:', err);
+    } finally {
+      setIsCorrelating(false);
+    }
+  };
 
   const scrollToTable = () => {
     const el = document.getElementById('findings-table');
@@ -136,6 +156,15 @@ export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
         <SymptomsChecklist
           symptoms={summary.patient_symptoms}
           affectedParameters={summary.affected_parameters}
+          onSelectedSymptomsChange={handleSymptomsChange}
+        />
+      )}
+
+      {/* Correlated Potential Clinical Conditions & Diseases */}
+      {conditions && conditions.length > 0 && (
+        <AssociatedConditionsSection
+          conditions={conditions}
+          isLoading={isCorrelating}
         />
       )}
 

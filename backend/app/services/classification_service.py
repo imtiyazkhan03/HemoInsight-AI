@@ -1,11 +1,14 @@
 import logging
-from typing import List, Tuple
+from typing import List, Tuple, Optional
 from ..models.schemas import BloodTestItem, TestStatus, ReportSummary, OverallOutcome
+from .condition_correlation_service import ConditionCorrelationService
 
 logger = logging.getLogger(__name__)
 
 
 class ClassificationService:
+    def __init__(self):
+        self.condition_service = ConditionCorrelationService()
     def classify_item(self, item: BloodTestItem) -> BloodTestItem:
         """
         Classifies an individual blood test item according to verified values and reference ranges.
@@ -46,7 +49,11 @@ class ClassificationService:
         """
         return [self.classify_item(item) for item in items]
 
-    def generate_overall_summary(self, items: List[BloodTestItem]) -> ReportSummary:
+    def generate_overall_summary(
+        self,
+        items: List[BloodTestItem],
+        selected_symptoms: Optional[List[str]] = None,
+    ) -> ReportSummary:
         """
         Calculates report-level statistics and determines overall outcome (Outcome A, B, or C).
         """
@@ -73,6 +80,12 @@ class ClassificationService:
                         seen_symptoms.add(clean_s.lower())
                         patient_symptoms.append(clean_s)
 
+        # Correlate biomarkers and symptoms with clinical condition patterns
+        associated_conditions = self.condition_service.correlate(
+            parameters=items,
+            selected_symptoms=selected_symptoms or patient_symptoms
+        )
+
         # Determine Outcome
         if total == 0 or (needs_review > 0 and needs_review >= total / 2):
             outcome = OverallOutcome.INSUFFICIENT_DATA
@@ -98,6 +111,7 @@ class ClassificationService:
             needs_review_count=needs_review,
             affected_parameters=affected_params,
             patient_symptoms=patient_symptoms,
+            associated_conditions=associated_conditions,
             overall_outcome=outcome,
             overall_title=title,
             overall_message=msg,

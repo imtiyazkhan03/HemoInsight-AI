@@ -53,6 +53,25 @@ class ReportMetadata(BaseModel):
     lab_name: Optional[str] = None
 
 
+class AssociatedCondition(BaseModel):
+    id: str
+    condition_name: str
+    category: str
+    severity_level: str = "Clinical Follow-up Recommended"
+    match_level: str  # "High Correlation", "Moderate Correlation", "Possible Consideration"
+    match_score: int  # 0 to 100 percentage
+    matching_biomarkers: List[str] = Field(default_factory=list)
+    matching_symptoms: List[str] = Field(default_factory=list)
+    overview: str
+    suggested_follow_up_tests: List[str] = Field(default_factory=list)
+    doctor_discussion_points: List[str] = Field(default_factory=list)
+
+
+class CorrelateConditionsRequest(BaseModel):
+    parameters: List[BloodTestItem]
+    selected_symptoms: List[str] = Field(default_factory=list)
+
+
 class ReportSummary(BaseModel):
     total_parameters: int
     within_range_count: int
@@ -61,6 +80,7 @@ class ReportSummary(BaseModel):
     needs_review_count: int
     affected_parameters: List[str] = Field(default_factory=list)
     patient_symptoms: List[str] = Field(default_factory=list)
+    associated_conditions: List[AssociatedCondition] = Field(default_factory=list)
     overall_outcome: OverallOutcome
     overall_title: str
     overall_message: str

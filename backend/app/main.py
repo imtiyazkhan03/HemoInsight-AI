@@ -17,6 +17,8 @@ from .models.schemas import (
     OverallOutcome,
     ExtractionConfidence,
     SampleReport,
+    AssociatedCondition,
+    CorrelateConditionsRequest,
 )
 from .services.ocr_service import OCRService
 from .services.pdf_service import PDFService
@@ -200,6 +202,22 @@ def get_sample_reports():
                 BloodTestItem(id="s4-6", test_name="Calcium", value=9.2, raw_value="9.2", unit="mg/dL", ref_min=8.5, ref_max=10.5, ref_range_text="8.5 - 10.5", lab_flag="Normal", category="Electrolytes", status=TestStatus.WITHIN_RANGE),
             ]
         ),
+        SampleReport(
+            id="sample-typhoid-enteric",
+            title="Febrile Illness & Enteric (Typhoid) Panel",
+            description="Acute febrile blood panel showing leukopenia, low platelets, and reactive liver transaminitis matching enteric fever patterns.",
+            outcome_preview="Some Results Need Attention (Outcome B)",
+            filename="sample_typhoid_enteric.pdf",
+            parameters=[
+                BloodTestItem(id="s5-1", test_name="White Blood Cell Count", value=3.2, raw_value="3.2", unit="x10^3/mcL", ref_min=4.0, ref_max=11.0, ref_range_text="4.0 - 11.0", lab_flag="L", category="Complete Blood Count (CBC)", status=TestStatus.LOW),
+                BloodTestItem(id="s5-2", test_name="Platelets", value=130.0, raw_value="130", unit="x10^3/mcL", ref_min=150.0, ref_max=450.0, ref_range_text="150.0 - 450.0", lab_flag="L", category="Complete Blood Count (CBC)", status=TestStatus.LOW),
+                BloodTestItem(id="s5-3", test_name="ALT (SGPT)", value=74.0, raw_value="74", unit="U/L", ref_min=7.0, ref_max=56.0, ref_range_text="7 - 56", lab_flag="H", category="Liver Function", status=TestStatus.HIGH),
+                BloodTestItem(id="s5-4", test_name="AST (SGOT)", value=68.0, raw_value="68", unit="U/L", ref_min=10.0, ref_max=40.0, ref_range_text="10 - 40", lab_flag="H", category="Liver Function", status=TestStatus.HIGH),
+                BloodTestItem(id="s5-5", test_name="C-Reactive Protein (CRP)", value=22.4, raw_value="22.4", unit="mg/L", ref_min=0.0, ref_max=5.0, ref_range_text="0.0 - 5.0", lab_flag="H", category="Inflammatory Markers", status=TestStatus.HIGH),
+                BloodTestItem(id="s5-6", test_name="Hemoglobin", value=13.4, raw_value="13.4", unit="g/dL", ref_min=12.0, ref_max=16.0, ref_range_text="12.0 - 16.0", lab_flag="Normal", category="Complete Blood Count (CBC)", status=TestStatus.WITHIN_RANGE),
+                BloodTestItem(id="s5-7", test_name="Serum Creatinine", value=0.92, raw_value="0.92", unit="mg/dL", ref_min=0.6, ref_max=1.3, ref_range_text="0.6 - 1.3", lab_flag="Normal", category="Renal Function", status=TestStatus.WITHIN_RANGE),
+            ]
+        ),
     ]
 
 
@@ -318,6 +336,23 @@ async def verify_and_finalize(payload: VerifyAndFinalizeRequest):
     except Exception as e:
         logger.error(f"Error finalizing verified report: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=f"Failed to finalize verified report: {str(e)}")
+
+
+@app.post("/api/analyze/correlate-conditions", response_model=List[AssociatedCondition])
+async def correlate_conditions_endpoint(payload: CorrelateConditionsRequest):
+    """
+    Dynamically correlate blood test items and active/selected symptoms with clinical conditions.
+    """
+    try:
+        classified_items = classification_service.classify_all(payload.parameters)
+        explained_items = medical_explanation_service.attach_explanations(classified_items)
+        return classification_service.condition_service.correlate(
+            parameters=explained_items,
+            selected_symptoms=payload.selected_symptoms,
+        )
+    except Exception as e:
+        logger.error(f"Error correlating conditions: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail=f"Failed to correlate conditions: {str(e)}")
 
 
 @app.post("/api/export/csv")

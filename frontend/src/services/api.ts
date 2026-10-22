@@ -126,3 +126,17 @@ export async function getSampleReports(): Promise<SampleReport[]> {
   if (!res.ok) throw new Error('Failed to load sample reports');
   return res.json();
 }
+
+export async function correlateConditions(
+  parameters: BloodTestItem[],
+  selectedSymptoms: string[]
+): Promise<import('../types').AssociatedCondition[]> {
+  const res = await apiFetch('/api/analyze/correlate-conditions', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ parameters, selected_symptoms: selectedSymptoms }),
+  });
+
+  if (!res.ok) throw new Error('Failed to correlate conditions');
+  return res.json();
+}

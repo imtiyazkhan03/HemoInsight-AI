@@ -1,0 +1,695 @@
+[
+  {
+    "id": "typhoid_enteric_fever",
+    "condition_name": "Enteric (Typhoid) Fever",
+    "category": "Infectious Diseases",
+    "severity_level": "Requires Prompt Medical Attention",
+    "biomarker_rules": [
+      {
+        "parameter_keys": ["wbc", "white blood cell count", "leukocytes", "total leukocyte count", "tlc"],
+        "expected_status": "LOW",
+        "weight": 2.0,
+        "importance": "characteristic",
+        "description": "Leukopenia (normal or low WBC despite high fever)"
+      },
+      {
+        "parameter_keys": ["platelets", "platelet count", "thrombocytes"],
+        "expected_status": "LOW",
+        "weight": 1.5,
+        "importance": "supportive",
+        "description": "Mild thrombocytopenia"
+      },
+      {
+        "parameter_keys": ["alt", "sgpt", "alanine aminotransferase"],
+        "expected_status": "HIGH",
+        "weight": 1.5,
+        "importance": "supportive",
+        "description": "Mild reactive elevation of ALT (transaminitis)"
+      },
+      {
+        "parameter_keys": ["ast", "sgot", "aspartate aminotransferase"],
+        "expected_status": "HIGH",
+        "weight": 1.5,
+        "importance": "supportive",
+        "description": "Mild reactive elevation of AST"
+      },
+      {
+        "parameter_keys": ["crp", "c-reactive protein", "esr", "erythrocyte sedimentation rate"],
+        "expected_status": "HIGH",
+        "weight": 1.0,
+        "importance": "supportive",
+        "description": "Elevated systemic inflammatory markers"
+      }
+    ],
+    "symptom_keywords": [
+      "fever",
+      "step-ladder",
+      "chills",
+      "headache",
+      "abdominal pain",
+      "stomach pain",
+      "fatigue",
+      "weakness",
+      "loss of appetite",
+      "coated tongue",
+      "constipation",
+      "diarrhea",
+      "nausea"
+    ],
+    "overview": "Enteric fever (commonly caused by Salmonella enterica serovar Typhi) classically presents with a paradoxically low or normal white blood cell count (relative leukopenia) accompanied by persistent fever, mild liver enzyme irritation (elevated ALT/AST), and slight platelet reduction. It requires definitive microbiological confirmation.",
+    "suggested_follow_up_tests": [
+      "Blood Culture for Salmonella enterica (gold standard, highest yield in weeks 1–2)",
+      "Widal Agglutination Serology Test (evaluating baseline TO & TH antibody titers)",
+      "Typhidot (IgM & IgG serology rapid antibody assay)",
+      "Stool & Urine Cultures for Salmonella isolation",
+      "Complete Liver Function Test (LFT) panel"
+    ],
+    "doctor_discussion_points": [
+      "Discuss travel history, food/water exposure, or recent dining outside.",
+      "Evaluate whether empirical antibiotic therapy (such as azithromycin, ceftriaxone, or fluoroquinolones) is indicated pending culture results.",
+      "Review hydration, oral rehydration therapy (ORS), and temperature management."
+    ]
+  },
+  {
+    "id": "dengue_fever",
+    "condition_name": "Dengue Fever / Acute Arboviral Infection",
+    "category": "Infectious Diseases",
+    "severity_level": "Requires Prompt Medical Attention",
+    "biomarker_rules": [
+      {
+        "parameter_keys": ["platelets", "platelet count", "thrombocytes"],
+        "expected_status": "LOW",
+        "weight": 2.5,
+        "importance": "characteristic",
+        "description": "Marked or progressive thrombocytopenia (low platelet count)"
+      },
+      {
+        "parameter_keys": ["wbc", "white blood cell count", "leukocytes", "tlc"],
+        "expected_status": "LOW",
+        "weight": 2.0,
+        "importance": "characteristic",
+        "description": "Pronounced leukopenia (low white blood cell count)"
+      },
+      {
+        "parameter_keys": ["hematocrit", "packed cell volume", "pcv"],
+        "expected_status": "HIGH",
+        "weight": 2.0,
+        "importance": "characteristic",
+        "description": "Hemoconcentration (elevated hematocrit reflecting plasma leakage)"
+      },
+      {
+        "parameter_keys": ["alt", "sgpt", "ast", "sgot"],
+        "expected_status": "HIGH",
+        "weight": 1.0,
+        "importance": "supportive",
+        "description": "Elevated transaminases from acute viral stress"
+      }
+    ],
+    "symptom_keywords": [
+      "high fever",
+      "fever",
+      "retro-orbital",
+      "eye pain",
+      "pain behind eyes",
+      "joint pain",
+      "body aches",
+      "breakbone",
+      "rash",
+      "nausea",
+      "vomiting",
+      "bruising",
+      "bleeding gums"
+    ],
+    "overview": "Dengue is an acute mosquito-borne viral infection marked by a sharp drop in platelets (thrombocytopenia), low white blood cells (leukopenia), and sometimes elevated hematocrit reflecting plasma leakage. Daily monitoring of platelet count and hematocrit is standard clinical protocol.",
+    "suggested_follow_up_tests": [
+      "Dengue NS1 Antigen ELISA (high diagnostic sensitivity during days 1–5 of fever)",
+      "Dengue IgM & IgG Antibody ELISA (identifies primary vs. secondary infection after day 5)",
+      "Serial Complete Blood Counts (CBC) every 24 hours to monitor platelet trajectory and hematocrit stability",
+      "Serum Electrolytes and Liver Function Test"
+    ],
+    "doctor_discussion_points": [
+      "Watch for critical warning signs: persistent vomiting, severe abdominal tenderness, mucosal bleeding, or sudden restlessness.",
+      "Strict avoidance of NSAIDs, aspirin, or ibuprofen (acetaminophen/paracetamol is preferred to avoid worsening bleeding risks).",
+      "Aggressive oral hydration and electrolyte fluid management."
+    ]
+  },
+  {
+    "id": "iron_deficiency_anemia",
+    "condition_name": "Iron Deficiency Anemia (Microcytic Hypochromic)",
+    "category": "Hematology",
+    "severity_level": "Clinical Follow-up Recommended",
+    "biomarker_rules": [
+      {
+        "parameter_keys": ["hemoglobin", "hb", "hgb", "total hemoglobin"],
+        "expected_status": "LOW",
+        "weight": 2.5,
+        "importance": "characteristic",
+        "description": "Subnormal hemoglobin level"
+      },
+      {
+        "parameter_keys": ["mcv", "mean corpuscular volume"],
+        "expected_status": "LOW",
+        "weight": 2.0,
+        "importance": "characteristic",
+        "description": "Microcytosis (small red blood cells < 80 fL)"
+      },
+      {
+        "parameter_keys": ["mch", "mean corpuscular hemoglobin"],
+        "expected_status": "LOW",
+        "weight": 1.5,
+        "importance": "supportive",
+        "description": "Hypochromia (pale red blood cells)"
+      },
+      {
+        "parameter_keys": ["rbc", "red blood cell count", "erythrocyte count"],
+        "expected_status": "LOW",
+        "weight": 1.5,
+        "importance": "supportive",
+        "description": "Reduced circulating red cell mass"
+      },
+      {
+        "parameter_keys": ["hematocrit", "pcv"],
+        "expected_status": "LOW",
+        "weight": 1.5,
+        "importance": "supportive",
+        "description": "Low packed cell volume"
+      },
+      {
+        "parameter_keys": ["ferritin", "serum ferritin"],
+        "expected_status": "LOW",
+        "weight": 2.5,
+        "importance": "characteristic",
+        "description": "Depleted iron storage reserves"
+      }
+    ],
+    "symptom_keywords": [
+      "fatigue",
+      "tiredness",
+      "weakness",
+      "exhaustion",
+      "pale",
+      "pallor",
+      "shortness of breath",
+      "dizziness",
+      "lightheadedness",
+      "cold hands",
+      "cold feet",
+      "brittle nails",
+      "palpitations",
+      "headache"
+    ],
+    "overview": "The triad of low hemoglobin, low MCV, and low MCH indicates microcytic hypochromic red blood cells. The most prevalent cause globally is iron deficiency due to inadequate dietary intake, heavy menstrual blood loss, or occult gastrointestinal bleeding.",
+    "suggested_follow_up_tests": [
+      "Serum Ferritin (most reliable indicator of total body iron stores)",
+      "Total Iron Binding Capacity (TIBC) and Transferrin Saturation",
+      "Peripheral Blood Smear (PBS) microscopy to confirm microcytosis and anisopoikilocytosis",
+      "Fecal Occult Blood Test (FOBT) or endoscopy/colonoscopy if gastrointestinal blood loss is suspected"
+    ],
+    "doctor_discussion_points": [
+      "Determine the underlying cause of iron loss or malabsorption rather than treating numbers in isolation.",
+      "Discuss oral iron supplementation regimens (e.g. ferrous sulfate or bisglycinate with Vitamin C for optimal absorption).",
+      "Explore dietary enrichment with heme and non-heme iron sources."
+    ]
+  },
+  {
+    "id": "megaloblastic_anemia",
+    "condition_name": "Vitamin B12 or Folate Deficiency (Macrocytic Anemia)",
+    "category": "Hematology & Nutrition",
+    "severity_level": "Clinical Follow-up Recommended",
+    "biomarker_rules": [
+      {
+        "parameter_keys": ["hemoglobin", "hb", "hgb"],
+        "expected_status": "LOW",
+        "weight": 2.0,
+        "importance": "characteristic",
+        "description": "Reduced hemoglobin concentration"
+      },
+      {
+        "parameter_keys": ["mcv", "mean corpuscular volume"],
+        "expected_status": "HIGH",
+        "weight": 2.5,
+        "importance": "characteristic",
+        "description": "Macrocytosis (abnormally large red blood cells > 100 fL)"
+      },
+      {
+        "parameter_keys": ["vitamin b12", "cyanocobalamin", "b12"],
+        "expected_status": "LOW",
+        "weight": 2.5,
+        "importance": "characteristic",
+        "description": "Subnormal serum Vitamin B12 level"
+      }
+    ],
+    "symptom_keywords": [
+      "fatigue",
+      "tingling",
+      "numbness",
+      "pins and needles",
+      "paresthesia",
+      "memory loss",
+      "brain fog",
+      "unsteady balance",
+      "sore tongue",
+      "glossitis",
+      "weakness"
+    ],
+    "overview": "Macrocytic anemia with elevated MCV often stems from impaired DNA synthesis during erythrocyte maturation, most frequently driven by Vitamin B12 or folate deficiency. Vitamin B12 deficiency may also cause neurological and sensory symptoms.",
+    "suggested_follow_up_tests": [
+      "Serum Vitamin B12 and Serum Folate quantification",
+      "Methylmalonic Acid (MMA) and Homocysteine levels (sensitive functional metabolic markers)",
+      "Intrinsic Factor Antibodies & Parietal Cell Antibodies (to evaluate Pernicious Anemia)",
+      "Peripheral Blood Smear for hypersegmented neutrophils"
+    ],
+    "doctor_discussion_points": [
+      "Assess dietary patterns (e.g., strict vegetarian/vegan diets) and gastric absorption issues (e.g., prolonged metformin or PPI use).",
+      "Discuss parenteral (IM) or high-dose oral cobalamin replacement.",
+      "Review any sensory or neurological symptoms (tingling, gait imbalance)."
+    ]
+  },
+  {
+    "id": "acute_bacterial_infection",
+    "condition_name": "Acute Bacterial Infection / Inflammatory Response",
+    "category": "Infectious Diseases & Immunology",
+    "severity_level": "Requires Prompt Medical Attention",
+    "biomarker_rules": [
+      {
+        "parameter_keys": ["wbc", "white blood cell count", "leukocytes", "tlc"],
+        "expected_status": "HIGH",
+        "weight": 2.5,
+        "importance": "characteristic",
+        "description": "Leukocytosis (elevated total white blood cell count)"
+      },
+      {
+        "parameter_keys": ["neutrophils", "neutrophil count", "absolute neutrophil count", "anc"],
+        "expected_status": "HIGH",
+        "weight": 2.0,
+        "importance": "characteristic",
+        "description": "Neutrophilia (elevated neutrophil percentage or count)"
+      },
+      {
+        "parameter_keys": ["crp", "c-reactive protein", "esr", "erythrocyte sedimentation rate"],
+        "expected_status": "HIGH",
+        "weight": 1.5,
+        "importance": "supportive",
+        "description": "High acute-phase inflammatory protein concentration"
+      }
+    ],
+    "symptom_keywords": [
+      "fever",
+      "high fever",
+      "chills",
+      "shivering",
+      "sweats",
+      "cough",
+      "sore throat",
+      "burning urination",
+      "dysuria",
+      "localized pain",
+      "redness",
+      "swelling",
+      "fatigue"
+    ],
+    "overview": "A marked elevation in total WBC count accompanied by neutrophilia is the quintessential hallmark of acute bacterial infection, tissue injury, or systemic inflammation. Identification of the anatomical focus of infection is essential.",
+    "suggested_follow_up_tests": [
+      "High-sensitivity C-Reactive Protein (hs-CRP) and Quantitative Procalcitonin",
+      "Targeted Cultures: Urine Analysis & Culture, Sputum, Throat Swab, or Wound Swab",
+      "Chest Radiograph (X-ray) if pulmonary signs (cough, dyspnea) are present",
+      "Blood cultures if high-grade spikes or bacteremia is suspected"
+    ],
+    "doctor_discussion_points": [
+      "Identify the specific anatomical site of infection (respiratory, urinary, skin, dental, etc.).",
+      "Determine whether targeted antimicrobial therapy is warranted based on culture sensitivity.",
+      "Monitor temperature curves and vital signs."
+    ]
+  },
+  {
+    "id": "type_2_diabetes",
+    "condition_name": "Type 2 Diabetes / Impaired Glucose Regulation",
+    "category": "Endocrinology & Metabolism",
+    "severity_level": "Clinical Follow-up Recommended",
+    "biomarker_rules": [
+      {
+        "parameter_keys": ["fasting blood glucose", "glucose", "blood sugar", "fasting glucose", "fbs"],
+        "expected_status": "HIGH",
+        "weight": 2.5,
+        "importance": "characteristic",
+        "description": "Hyperglycemia (fasting glucose exceeding normal physiological baseline)"
+      },
+      {
+        "parameter_keys": ["hba1c", "glycated hemoglobin", "hemoglobin a1c"],
+        "expected_status": "HIGH",
+        "weight": 2.5,
+        "importance": "characteristic",
+        "description": "Elevated HbA1c reflecting sustained 3-month glycation"
+      },
+      {
+        "parameter_keys": ["triglycerides", "triglyceride"],
+        "expected_status": "HIGH",
+        "weight": 1.0,
+        "importance": "supportive",
+        "description": "Concurrent hypertriglyceridemia (metabolic dyslipidemia)"
+      }
+    ],
+    "symptom_keywords": [
+      "thirst",
+      "increased thirst",
+      "polydipsia",
+      "frequent urination",
+      "polyuria",
+      "night urination",
+      "nocturia",
+      "unexplained weight loss",
+      "fatigue",
+      "blurred vision",
+      "slow healing",
+      "tingling in feet"
+    ],
+    "overview": "Elevated fasting blood sugar and/or HbA1c indicates impaired insulin secretion or systemic insulin resistance. Prediabetes (HbA1c 5.7–6.4%) and Diabetes (HbA1c ≥ 6.5% or FPG ≥ 126 mg/dL) require structured lifestyle, nutritional, and medical management.",
+    "suggested_follow_up_tests": [
+      "Confirmatory Fasting Plasma Glucose (FPG) and 2-Hour Postprandial Glucose (PPBS)",
+      "Standardized 75g Oral Glucose Tolerance Test (OGTT)",
+      "Urine Spot Albumin-to-Creatinine Ratio (uACR) for renal microvascular screening",
+      "Comprehensive Lipid Panel and baseline ECG"
+    ],
+    "doctor_discussion_points": [
+      "Personalized glycemic targets and home blood glucose self-monitoring.",
+      "Medical nutrition therapy (low glycemic index carbohydrates, fiber enrichment).",
+      "Evaluation for first-line pharmacotherapy (e.g. metformin) or lifestyle modification programs."
+    ]
+  },
+  {
+    "id": "hypothyroidism",
+    "condition_name": "Hypothyroidism (Underactive Thyroid / Hashimoto's)",
+    "category": "Endocrinology",
+    "severity_level": "Clinical Follow-up Recommended",
+    "biomarker_rules": [
+      {
+        "parameter_keys": ["tsh", "thyroid stimulating hormone", "thyrotropin"],
+        "expected_status": "HIGH",
+        "weight": 2.5,
+        "importance": "characteristic",
+        "description": "Elevated TSH (anterior pituitary compensatory stimulation)"
+      },
+      {
+        "parameter_keys": ["free t4", "ft4", "free thyroxine"],
+        "expected_status": "LOW",
+        "weight": 2.5,
+        "importance": "characteristic",
+        "description": "Subnormal Free T4 (overt hypothyroidism)"
+      },
+      {
+        "parameter_keys": ["cholesterol", "total cholesterol", "ldl cholesterol"],
+        "expected_status": "HIGH",
+        "weight": 1.0,
+        "importance": "supportive",
+        "description": "Secondary hypercholesterolemia due to lowered metabolic clearance"
+      }
+    ],
+    "symptom_keywords": [
+      "fatigue",
+      "weight gain",
+      "cold intolerance",
+      "feeling cold",
+      "constipation",
+      "dry skin",
+      "hair loss",
+      "brittle hair",
+      "brain fog",
+      "memory problems",
+      "muscle cramps",
+      "sluggishness",
+      "depression",
+      "puffy face"
+    ],
+    "overview": "An elevated TSH level is the most sensitive indicator that the thyroid gland is producing inadequate thyroxine. If Free T4 is normal, this is subclinical hypothyroidism; if Free T4 is reduced, it indicates overt hypothyroidism, commonly caused by autoimmune Hashimoto's thyroiditis.",
+    "suggested_follow_up_tests": [
+      "Free T4 and Free T3 quantitative blood levels",
+      "Anti-Thyroid Peroxidase (Anti-TPO) & Anti-Thyroglobulin (Anti-Tg) Antibodies",
+      "High-resolution Thyroid Ultrasound imaging",
+      "Lipid panel evaluation"
+    ],
+    "doctor_discussion_points": [
+      "Whether thyroid hormone replacement therapy (levothyroxine) is recommended based on TSH threshold.",
+      "Timing of medication (taken fasting in the morning away from calcium or iron supplements).",
+      "Schedule for repeat TSH testing in 6–8 weeks for dosage titration."
+    ]
+  },
+  {
+    "id": "hyperthyroidism",
+    "condition_name": "Hyperthyroidism / Thyrotoxicosis",
+    "category": "Endocrinology",
+    "severity_level": "Requires Prompt Medical Attention",
+    "biomarker_rules": [
+      {
+        "parameter_keys": ["tsh", "thyroid stimulating hormone"],
+        "expected_status": "LOW",
+        "weight": 2.5,
+        "importance": "characteristic",
+        "description": "Suppressed TSH (< 0.4 uIU/mL)"
+      },
+      {
+        "parameter_keys": ["free t4", "ft4", "free thyroxine", "total t4"],
+        "expected_status": "HIGH",
+        "weight": 2.5,
+        "importance": "characteristic",
+        "description": "Elevated circulating free thyroid hormones"
+      }
+    ],
+    "symptom_keywords": [
+      "palpitations",
+      "rapid heartbeat",
+      "tachycardia",
+      "unexplained weight loss",
+      "heat intolerance",
+      "excessive sweating",
+      "hand tremors",
+      "anxiety",
+      "nervousness",
+      "insomnia",
+      "diarrhea",
+      "frequent bowel movements"
+    ],
+    "overview": "Suppressed TSH alongside elevated Free T4 reflects an overactive thyroid gland (thyrotoxicosis), most commonly driven by Graves' disease, toxic multinodular goiter, or subacute thyroiditis.",
+    "suggested_follow_up_tests": [
+      "Free T3 (Triiodothyronine) quantitative assessment",
+      "TSH Receptor Antibodies (TRAb) / Thyroid Stimulating Immunoglobulins (TSI)",
+      "Radioactive Iodine Uptake (RAIU) and thyroid scan",
+      "Baseline Electrocardiogram (ECG) for rhythm evaluation"
+    ],
+    "doctor_discussion_points": [
+      "Symptom management with beta-blockers for tachycardia and tremors.",
+      "Evaluation of antithyroid medications (e.g. methimazole or propylthiouracil).",
+      "Endocrinology consultation for specialized management."
+    ]
+  },
+  {
+    "id": "atherogenic_dyslipidemia",
+    "condition_name": "Atherogenic Dyslipidemia & Cardiovascular Risk",
+    "category": "Cardiovascular & Metabolic",
+    "severity_level": "Clinical Follow-up Recommended",
+    "biomarker_rules": [
+      {
+        "parameter_keys": ["ldl", "ldl cholesterol", "low density lipoprotein"],
+        "expected_status": "HIGH",
+        "weight": 2.5,
+        "importance": "characteristic",
+        "description": "Elevated atherogenic LDL cholesterol"
+      },
+      {
+        "parameter_keys": ["total cholesterol", "cholesterol"],
+        "expected_status": "HIGH",
+        "weight": 2.0,
+        "importance": "characteristic",
+        "description": "Hypercholesterolemia"
+      },
+      {
+        "parameter_keys": ["triglycerides", "triglyceride"],
+        "expected_status": "HIGH",
+        "weight": 1.5,
+        "importance": "supportive",
+        "description": "Elevated serum triglycerides"
+      },
+      {
+        "parameter_keys": ["hdl", "hdl cholesterol", "high density lipoprotein"],
+        "expected_status": "LOW",
+        "weight": 1.5,
+        "importance": "supportive",
+        "description": "Reduced protective HDL cholesterol"
+      }
+    ],
+    "symptom_keywords": [
+      "chest discomfort",
+      "chest pain",
+      "shortness of breath",
+      "breathlessness on exertion",
+      "fatigue",
+      "asymptomatic"
+    ],
+    "overview": "A pattern of elevated LDL, high triglycerides, and low HDL is associated with increased deposition of arterial plaques (atherosclerosis) and elevated long-term cardiovascular risk.",
+    "suggested_follow_up_tests": [
+      "Apolipoprotein B (ApoB) and Lipoprotein(a) [Lp(a)]",
+      "High-sensitivity C-Reactive Protein (hs-CRP) for vascular inflammation",
+      "Coronary Artery Calcium (CAC) CT scan for structural plaque assessment",
+      "10-Year ASCVD (Atherosclerotic Cardiovascular Disease) Risk Score calculation"
+    ],
+    "doctor_discussion_points": [
+      "Calculation of comprehensive 10-year ASCVD risk score.",
+      "Need for lipid-lowering pharmacotherapy (e.g. statin therapy, ezetimibe).",
+      "Cardiovascular risk reduction through diet, physical exercise, and blood pressure monitoring."
+    ]
+  },
+  {
+    "id": "hepatic_injury",
+    "condition_name": "Hepatocellular Stress / Fatty Liver (NAFLD) / Hepatitis",
+    "category": "Hepatology",
+    "severity_level": "Clinical Follow-up Recommended",
+    "biomarker_rules": [
+      {
+        "parameter_keys": ["alt", "sgpt", "alanine aminotransferase"],
+        "expected_status": "HIGH",
+        "weight": 2.5,
+        "importance": "characteristic",
+        "description": "Elevated ALT reflecting liver cell membrane disruption"
+      },
+      {
+        "parameter_keys": ["ast", "sgot", "aspartate aminotransferase"],
+        "expected_status": "HIGH",
+        "weight": 2.0,
+        "importance": "characteristic",
+        "description": "Elevated AST from hepatic or metabolic stress"
+      },
+      {
+        "parameter_keys": ["bilirubin", "total bilirubin"],
+        "expected_status": "HIGH",
+        "weight": 1.5,
+        "importance": "supportive",
+        "description": "Hyperbilirubinemia (impaired biliary excretion)"
+      },
+      {
+        "parameter_keys": ["alp", "alkaline phosphatase"],
+        "expected_status": "HIGH",
+        "weight": 1.5,
+        "importance": "supportive",
+        "description": "Cholestatic or biliary canalicular irritation"
+      }
+    ],
+    "symptom_keywords": [
+      "right side pain",
+      "abdominal discomfort",
+      "right upper quadrant pain",
+      "fatigue",
+      "nausea",
+      "loss of appetite",
+      "yellow eyes",
+      "jaundice",
+      "dark urine",
+      "pale stools"
+    ],
+    "overview": "Transaminase elevations (ALT and AST) indicate hepatocellular stress or injury. Common benign and reversible causes include metabolic dysfunction-associated steatotic liver disease (fatty liver / MASLD), acute medication/supplement effects, alcohol, or viral hepatitis.",
+    "suggested_follow_up_tests": [
+      "Abdominal Ultrasound (assessing liver echogenicity, hepatomegaly, and fatty infiltration)",
+      "Viral Hepatitis Serology Panel (HBsAg for Hepatitis B, Anti-HCV for Hepatitis C, HAV IgM)",
+      "Fractionated Bilirubin and Gamma-Glutamyl Transferase (GGT)",
+      "Serum Ferritin and iron saturation to rule out hemochromatosis"
+    ],
+    "doctor_discussion_points": [
+      "Review of all prescription medications, over-the-counter drugs, herbal remedies, and alcohol intake.",
+      "Lifestyle and dietary interventions focused on gradual weight reduction and metabolic control.",
+      "Timing for repeat liver panel in 4–8 weeks."
+    ]
+  },
+  {
+    "id": "renal_impairment",
+    "condition_name": "Renal Impairment / Early Chronic Kidney Stress",
+    "category": "Nephrology",
+    "severity_level": "Requires Prompt Medical Attention",
+    "biomarker_rules": [
+      {
+        "parameter_keys": ["creatinine", "serum creatinine"],
+        "expected_status": "HIGH",
+        "weight": 2.5,
+        "importance": "characteristic",
+        "description": "Elevated serum creatinine reflecting reduced filtration"
+      },
+      {
+        "parameter_keys": ["bun", "blood urea nitrogen", "urea"],
+        "expected_status": "HIGH",
+        "weight": 2.0,
+        "importance": "supportive",
+        "description": "Azotemia (accumulation of nitrogenous waste)"
+      },
+      {
+        "parameter_keys": ["potassium", "serum potassium", "k+"],
+        "expected_status": "HIGH",
+        "weight": 1.5,
+        "importance": "supportive",
+        "description": "Hyperkalemia due to decreased tubular excretion"
+      }
+    ],
+    "symptom_keywords": [
+      "swelling",
+      "swollen ankles",
+      "swollen feet",
+      "puffy face",
+      "edema",
+      "changes in urination",
+      "foamy urine",
+      "decreased urination",
+      "fatigue",
+      "nausea",
+      "metallic taste",
+      "muscle cramps",
+      "high blood pressure"
+    ],
+    "overview": "Elevated creatinine and BUN indicate reduced glomerular filtration rate (GFR). Causes range from reversible prerenal dehydration and medication nephrotoxicity to primary renal parenchymal conditions.",
+    "suggested_follow_up_tests": [
+      "Estimated Glomerular Filtration Rate (eGFR) and Serum Cystatin C",
+      "Urine Albumin-to-Creatinine Ratio (uACR) and Complete Urinalysis with Microscopy",
+      "Renal & Bladder Ultrasound (measuring kidney size, cortical thickness, and obstruction)",
+      "Serum Electrolytes (Sodium, Potassium, Bicarbonate, Calcium, Phosphate)"
+    ],
+    "doctor_discussion_points": [
+      "Distinguish between acute kidney injury (e.g., dehydration, NSAID use) and chronic changes.",
+      "Review blood pressure targets and nephroprotective medications (such as ACEi/ARB or SGLT2i).",
+      "Avoidance of nephrotoxic medications (including regular NSAIDs/ibuprofen, contrast dyes)."
+    ]
+  },
+  {
+    "id": "thrombocytopenia_syndrome",
+    "condition_name": "Thrombocytopenia (Low Platelets)",
+    "category": "Hematology",
+    "severity_level": "Requires Prompt Medical Attention",
+    "biomarker_rules": [
+      {
+        "parameter_keys": ["platelets", "platelet count", "thrombocytes"],
+        "expected_status": "LOW",
+        "weight": 3.0,
+        "importance": "characteristic",
+        "description": "Platelet count below physiological baseline (< 150,000 /mcL)"
+      }
+    ],
+    "symptom_keywords": [
+      "easy bruising",
+      "petechiae",
+      "pinpoint red spots",
+      "bleeding gums",
+      "nosebleeds",
+      "epistaxis",
+      "prolonged bleeding from cuts",
+      "heavy menstrual bleeding",
+      "blood in urine",
+      "blood in stool"
+    ],
+    "overview": "A low platelet count reduces normal hemostatic clot formation. Common causes include acute viral infections (such as Dengue or viral hepatitis), immune thrombocytopenic purpura (ITP), drug-induced suppression, or splenic sequestration.",
+    "suggested_follow_up_tests": [
+      "Repeat CBC with Manual Peripheral Blood Smear to rule out EDTA-dependent pseudothrombocytopenia (platelet clumping)",
+      "Coagulation Profile (PT/INR and aPTT)",
+      "Viral serologies (Dengue, Hepatitis B/C, HIV, EBV)",
+      "Immune workup (Antinuclear Antibodies, Direct Coombs Test if indicated)"
+    ],
+    "doctor_discussion_points": [
+      "Review of recent medications (e.g. heparin, quinine, anticonvulsants, certain antibiotics).",
+      "Bleeding precaution counseling (avoid contact sports, avoid aspirin/NSAIDs).",
+      "Urgent hematology referral if platelet count is significantly decreased (< 50,000 /mcL)."
+    ]
+  }
+]

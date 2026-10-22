@@ -4,11 +4,13 @@ import { Activity, CheckSquare, Square, Info, Copy, Check, RotateCcw } from 'luc
 interface SymptomsChecklistProps {
   symptoms: string[];
   affectedParameters: string[];
+  onSelectedSymptomsChange?: (selected: string[]) => void;
 }
 
 export const SymptomsChecklist: React.FC<SymptomsChecklistProps> = ({
   symptoms,
   affectedParameters,
+  onSelectedSymptomsChange,
 }) => {
   const [checkedSymptoms, setCheckedSymptoms] = useState<Record<string, boolean>>({});
   const [filterMode, setFilterMode] = useState<'all' | 'checked'>('all');
@@ -18,22 +20,35 @@ export const SymptomsChecklist: React.FC<SymptomsChecklistProps> = ({
     return null;
   }
 
+  const notifyChange = (updated: Record<string, boolean>) => {
+    if (onSelectedSymptomsChange) {
+      const activeList = Object.keys(updated).filter(k => updated[k]);
+      onSelectedSymptomsChange(activeList);
+    }
+  };
+
   const toggleSymptom = (symp: string) => {
-    setCheckedSymptoms(prev => ({
-      ...prev,
-      [symp]: !prev[symp],
-    }));
+    setCheckedSymptoms(prev => {
+      const next = {
+        ...prev,
+        [symp]: !prev[symp],
+      };
+      notifyChange(next);
+      return next;
+    });
   };
 
   const selectAll = () => {
     const allChecked: Record<string, boolean> = {};
     symptoms.forEach(s => { allChecked[s] = true; });
     setCheckedSymptoms(allChecked);
+    notifyChange(allChecked);
   };
 
   const clearAll = () => {
     setCheckedSymptoms({});
     setFilterMode('all');
+    notifyChange({});
   };
 
   const checkedCount = Object.values(checkedSymptoms).filter(Boolean).length;
