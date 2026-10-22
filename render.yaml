@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: hemoinsight-ai
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: GEMINI_API_KEY
+        sync: false

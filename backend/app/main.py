@@ -713,3 +713,30 @@ def get_sample_reports():
             ]
         }
     ]
+
+
+# =====================================================================
+# Serve Frontend Static Build (Production Unified Full-Stack)
+# =====================================================================
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+from pathlib import Path
+
+FRONTEND_DIST = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
+if not FRONTEND_DIST.exists():
+    FRONTEND_DIST = Path("frontend/dist").resolve()
+
+if FRONTEND_DIST.exists() and (FRONTEND_DIST / "index.html").exists():
+    logger.info(f"Mounting unified production frontend from {FRONTEND_DIST}")
+    if (FRONTEND_DIST / "assets").exists():
+        app.mount("/assets", StaticFiles(directory=str(FRONTEND_DIST / "assets")), name="assets")
+
+    @app.get("/{full_path:path}")
+    async def serve_spa_frontend(full_path: str):
+        if full_path.startswith("api") or full_path in ["docs", "openapi.json", "redoc"]:
+            raise HTTPException(status_code=404, detail="API route not found")
+        
+        file_path = FRONTEND_DIST / full_path
+        if file_path.is_file():
+            return FileResponse(file_path)
+        return FileResponse(FRONTEND_DIST / "index.html")
