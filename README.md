@@ -1,6 +1,5 @@
 # HemoInsight AI — Smart Blood Report Analyzer
 **Next-Generation Clinical Biomarker Intelligence & Laboratory Interpretation System**
-*Academic AI/ML Project — Experiment 9*
 
 > **Objective:** An intelligent, evidence-supported web application that processes laboratory blood test reports (PDF, CSV, PNG, JPG, JPEG), extracts test parameters and biological reference intervals using deep learning OCR and multimodal vision AI, classifies results into **Within Range**, **Low**, **High**, or **Needs Review**, flags uncertain entries for human verification, correlates findings with physical symptoms, explains findings in clear plain language, and generates downloadable medical summaries.
 
