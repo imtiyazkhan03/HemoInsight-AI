@@ -1,0 +1,9 @@
+Test,Result,Unit,Reference Range,Flag
+Hemoglobin,10.4,g/dL,12.0 - 16.0,L
+Red Blood Cell Count,3.75,million/mcL,4.0 - 5.4,L
+Hematocrit,32.5,%,36.0 - 48.0,L
+Mean Corpuscular Volume (MCV),75.2,fL,80.0 - 100.0,L
+White Blood Cell Count,6.8,x10^3/mcL,4.0 - 11.0,Normal
+Platelets,128,x10^3/mcL,150.0 - 450.0,L
+Neutrophils,58,%,40.0 - 75.0,Normal
+Lymphocytes,32,%,20.0 - 45.0,Normal

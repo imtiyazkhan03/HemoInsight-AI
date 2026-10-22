@@ -1,0 +1,1631 @@
+{
+  "hemoglobin": {
+    "aliases": [
+      "hemoglobin",
+      "hb",
+      "hgb",
+      "total hemoglobin",
+      "haemoglobin",
+      "haemoglob",
+      "hemoglob",
+      "haemoglobin (hb)",
+      "hb (haemoglobin)",
+      "haemoglobin blood"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "g/dL",
+    "default_range": [
+      12.0,
+      17.5
+    ],
+    "description": "Hemoglobin is an iron-rich protein inside red blood cells responsible for transporting oxygen from the lungs to tissues throughout your body.",
+    "low_explanation": "Your hemoglobin level is below the reference interval. A low hemoglobin level indicates reduced oxygen-carrying capacity in the blood. Common causes include iron deficiency, chronic blood loss, vitamin B12 or folate deficiency, bone marrow conditions, or chronic illnesses. This result alone cannot pinpoint the specific cause and should be evaluated alongside red blood cell indices (MCV, MCH) and ferritin levels.",
+    "high_explanation": "Your hemoglobin level is above the reference interval. Elevated hemoglobin can occur with dehydration (hemoconcentration), chronic hypoxia (such as living at high altitudes or smoking), chronic lung conditions, or polycythemia. Dehydration is a very common reversible cause.",
+    "questions_for_doctor": [
+      "Could iron deficiency or dietary factors explain this result?",
+      "Would it be helpful to check my iron and ferritin levels?",
+      "Are there any repeat tests or symptoms I should monitor?"
+    ],
+    "display_name": "Hemoglobin (Hb)",
+    "low_symptoms": [
+      "Persistent fatigue, weakness, or lethargy",
+      "Shortness of breath with minimal exertion or stair climbing",
+      "Pale or yellowish skin, lips, or nail beds",
+      "Cold hands and feet",
+      "Dizziness, lightheadedness, or feeling faint",
+      "Fast or irregular heartbeat (palpitations)",
+      "Frequent headaches"
+    ],
+    "high_symptoms": [
+      "Flushed or reddened facial complexion",
+      "Dizziness, vertigo, or lightheadedness",
+      "Headaches and blurred vision",
+      "Pruritus (itching), particularly after a warm shower or bath",
+      "Feeling of fullness in the head or ears",
+      "Fatigue from sluggish circulation (hyperviscosity)"
+    ]
+  },
+  "rbc": {
+    "aliases": [
+      "rbc",
+      "red blood cell count",
+      "erythrocyte count",
+      "red blood cells",
+      "rbc count",
+      "total rbc count",
+      "erythrocytes",
+      "red cell count",
+      "total rbc"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "million/mcL",
+    "default_range": [
+      4.0,
+      5.9
+    ],
+    "description": "Red blood cells (erythrocytes) carry oxygen from your lungs to your body's tissues and return carbon dioxide to be exhaled.",
+    "low_explanation": "Your red blood cell count is below the reference interval. Lower RBC counts often correlate with anemia, nutritional deficiencies, kidney conditions, or acute/chronic blood loss.",
+    "high_explanation": "Your red blood cell count is higher than the reference interval. This can be caused by dehydration, sleep apnea, smoking, chronic hypoxemia, or less commonly, primary bone marrow production increases.",
+    "questions_for_doctor": [
+      "Does this RBC count align with my hemoglobin and hematocrit?",
+      "Should we assess nutritional markers like iron, B12, or folate?"
+    ],
+    "display_name": "Red Blood Cell Count (RBC)",
+    "low_symptoms": [
+      "Generalized weakness and physical fatigue",
+      "Shortness of breath on exertion",
+      "Pale skin or conjunctiva",
+      "Cold sensitivity in fingers and toes",
+      "Tachycardia (racing heart) during daily activities"
+    ],
+    "high_symptoms": [
+      "Headaches and visual disturbances",
+      "Dizziness or ringing in ears (tinnitus)",
+      "Skin itching, particularly following hot baths",
+      "Reddish or purplish tint to skin and gums",
+      "Joint pain or swelling in toes/fingers"
+    ]
+  },
+  "wbc": {
+    "aliases": [
+      "wbc",
+      "white blood cell count",
+      "leukocyte count",
+      "white blood cells",
+      "total wbc count",
+      "total leukocyte count",
+      "tlc",
+      "total leucocyte count",
+      "wbc count",
+      "wbc's",
+      "total leuco",
+      "total leucocyte",
+      "total leucocytes",
+      "leucocyte count",
+      "total wbc"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "x10^3/mcL",
+    "default_range": [
+      4.0,
+      11.0
+    ],
+    "description": "White blood cells are a critical part of your immune system, defending your body against infections, inflammation, and foreign pathogens.",
+    "low_explanation": "Your white blood cell count is below the reference range (leukopenia). A lower WBC count may be seen with viral infections, autoimmune reactions, certain medications, or bone marrow suppression.",
+    "high_explanation": "Your white blood cell count is above the reference range (leukocytosis). Elevated WBC counts frequently reflect an active immune response, such as an infection, tissue inflammation, physical or emotional stress, smoking, or recent vigorous exercise.",
+    "questions_for_doctor": [
+      "Could a recent viral or bacterial infection have caused this change?",
+      "Are any of my current medications known to affect white blood cell counts?"
+    ],
+    "display_name": "Total Leukocyte Count (WBC)",
+    "low_symptoms": [
+      "Recurrent or persistent low-grade fevers",
+      "Frequent infections (colds, sinus, respiratory, or urinary)",
+      "Mouth ulcers or swollen, tender gums",
+      "Sore throat that lingers",
+      "Chills, night sweats, and slow healing of minor skin wounds"
+    ],
+    "high_symptoms": [
+      "High fever, shaking chills, and systemic sweating",
+      "Generalized body aches, malaise, and exhaustion",
+      "Localized heat, redness, swelling, or pain (infection sites)",
+      "Cough, sore throat, or chest congestion",
+      "Unexplained weight loss or night drenching sweats"
+    ]
+  },
+  "platelets": {
+    "aliases": [
+      "platelets",
+      "platelet count",
+      "plt",
+      "thrombocytes",
+      "platelets count",
+      "total platelet count",
+      "thrombocyte count"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "x10^3/mcL",
+    "default_range": [
+      150.0,
+      450.0
+    ],
+    "description": "Platelets (thrombocytes) are specialized cell fragments essential for normal blood clotting and vascular repair.",
+    "low_explanation": "Your platelet count is below the reference interval (thrombocytopenia). This may increase bruising or bleeding tendencies. Potential reasons include viral infections, autoimmune conditions, medications, or splenic enlargement.",
+    "high_explanation": "Your platelet count is above the reference interval (thrombocytosis). High counts frequently represent a reactive response to inflammation, recent infection, iron deficiency, or recent surgery (reactive thrombocytosis).",
+    "questions_for_doctor": [
+      "Have I reported any unusual bruising, petechiae, or prolonged bleeding?",
+      "Could this be a temporary reactive response to recent inflammation or iron deficiency?"
+    ],
+    "display_name": "Platelet Count",
+    "low_symptoms": [
+      "Easy or spontaneous bruising without obvious trauma",
+      "Petechiae (tiny pinpoint red or purple spots on legs/arms)",
+      "Frequent or prolonged nosebleeds (epistaxis)",
+      "Bleeding gums after gentle brushing",
+      "Prolonged bleeding from minor cuts or dental work",
+      "Unusually heavy or prolonged menstrual bleeding"
+    ],
+    "high_symptoms": [
+      "Persistent dull headaches",
+      "Dizziness, lightheadedness, or feeling unsteady",
+      "Numbness, tingling, or burning in hands and feet",
+      "Transient vision changes or blurry spots",
+      "Localized redness, warmth, or throbbing in calves/arms"
+    ]
+  },
+  "hematocrit": {
+    "aliases": [
+      "hematocrit",
+      "hct",
+      "packed cell volume",
+      "pcv",
+      "packed cell volume pcv",
+      "haematocrit"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "%",
+    "default_range": [
+      36.0,
+      50.0
+    ],
+    "description": "Hematocrit represents the proportion of blood volume occupied by red blood cells.",
+    "low_explanation": "Your hematocrit is below the reference range, mirroring a reduced red blood cell mass or hemodilution. This is commonly observed in various forms of anemia.",
+    "high_explanation": "Your hematocrit is above the reference range. This frequently signifies hemoconcentration due to inadequate fluid intake/dehydration or conditions that trigger increased red blood cell synthesis.",
+    "questions_for_doctor": [
+      "How does my hematocrit correlate with my hemoglobin level?",
+      "Could fluid balance or dehydration have influenced this result?"
+    ],
+    "display_name": "Packed Cell Volume (PCV / Hematocrit)",
+    "low_symptoms": [
+      "Chronic fatigue, lack of stamina, and poor concentration",
+      "Shortness of breath during normal daily tasks",
+      "Pale appearance of skin, tongue, and inner eyelids",
+      "Dizziness when standing up abruptly"
+    ],
+    "high_symptoms": [
+      "Headaches, facial flushing, and mental sluggishness",
+      "Generalized generalized itching after warm bathing",
+      "Dizziness, vertigo, and visual blurring",
+      "Elevated blood pressure or pounding sensation in temples"
+    ]
+  },
+  "mcv": {
+    "aliases": [
+      "mcv",
+      "mean corpuscular volume",
+      "mean cell volume",
+      "m.c.v."
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "fL",
+    "default_range": [
+      80.0,
+      100.0
+    ],
+    "description": "Mean Corpuscular Volume measures the average physical size of individual red blood cells.",
+    "low_explanation": "Your MCV is below the reference range (microcytosis), meaning red blood cells are smaller than average. The most common cause is iron deficiency, followed by hemoglobinopathies such as thalassemia trait.",
+    "high_explanation": "Your MCV is above the reference range (macrocytosis), meaning red blood cells are larger than average. Common causes include vitamin B12 or folate deficiency, thyroid underactivity, alcohol consumption, or liver conditions.",
+    "questions_for_doctor": [
+      "Does the small or large red cell size suggest a specific nutritional deficiency (iron or B12/folate)?",
+      "Should further testing like ferritin or vitamin levels be ordered?"
+    ],
+    "display_name": "Mean Corpuscular Volume (MCV)",
+    "low_symptoms": [
+      "Symptoms of microcytic anemia: fatigue, brittle nails, pallor, cold intolerance"
+    ],
+    "high_symptoms": [
+      "Symptoms of macrocytic anemia: numbness or pins-and-needles in toes/fingers, brain fog, fatigue"
+    ]
+  },
+  "mch": {
+    "aliases": [
+      "mch",
+      "mean corpuscular hemoglobin",
+      "m.c.h."
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "pg",
+    "default_range": [
+      27.0,
+      33.0
+    ],
+    "description": "Mean Corpuscular Hemoglobin calculates the average amount of hemoglobin inside a single red blood cell.",
+    "low_explanation": "Low MCH (hypochromia) suggests red blood cells contain less hemoglobin than normal, typically seen alongside iron deficiency anemia or thalassemia.",
+    "high_explanation": "High MCH is typically associated with enlarged red blood cells (macrocytosis), such as with vitamin B12 or folate deficiency.",
+    "questions_for_doctor": [
+      "How does this MCH value correlate with my MCV and Hemoglobin results?"
+    ],
+    "display_name": "Mean Corpuscular Hemoglobin (MCH)",
+    "low_symptoms": [
+      "Fatigue, pallor, cold extremities, shortness of breath on exertion"
+    ],
+    "high_symptoms": [
+      "Tiredness, tingling in extremities, mental fog, balance changes"
+    ]
+  },
+  "mchc": {
+    "aliases": [
+      "mchc",
+      "mean corpuscular hemoglobin concentration",
+      "m.c.h.c."
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "g/dL",
+    "default_range": [
+      32.0,
+      36.0
+    ],
+    "description": "MCHC reflects the concentration of hemoglobin within a given volume of packed red blood cells.",
+    "low_explanation": "Low MCHC indicates pale red blood cells with diluted hemoglobin content, characteristic of iron deficiency anemia.",
+    "high_explanation": "Elevated MCHC is relatively uncommon and may reflect hereditary spherocytosis, cold agglutinins, or severe dehydration.",
+    "questions_for_doctor": [
+      "Is this result consistent with the rest of my complete blood count?"
+    ],
+    "display_name": "Mean Corpuscular Hemoglobin Concentration (MCHC)",
+    "low_symptoms": [
+      "Chronic fatigue, paleness, dizziness, reduced exercise tolerance"
+    ],
+    "high_symptoms": [
+      "Fatigue, jaundice (yellowish skin/eyes), dark-colored urine, gallstone discomfort"
+    ]
+  },
+  "rdw": {
+    "aliases": [
+      "rdw",
+      "rdw-cv",
+      "rdw-sd",
+      "red cell distribution width",
+      "rdw cv",
+      "rdw sd"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "%",
+    "default_range": [
+      11.5,
+      15.0
+    ],
+    "description": "Red Cell Distribution Width measures the degree of variation in red blood cell size (anisocytosis).",
+    "low_explanation": "A normal or low RDW indicates that red blood cells are uniform in size, which is generally a reassuring finding.",
+    "high_explanation": "A high RDW indicates significant variation in red cell sizes. It often appears in early developing nutritional anemias (iron, B12, folate) before other indices fully shift.",
+    "questions_for_doctor": [
+      "Does an elevated RDW point toward early iron or vitamin deficiency?"
+    ],
+    "display_name": "Red Cell Distribution Width (RDW)",
+    "low_symptoms": [
+      "Rarely clinically symptomatic on its own; reflects uniform red blood cell sizing"
+    ],
+    "high_symptoms": [
+      "Fatigue, breathlessness on exertion, pale skin, weakness (reflects mixed red cell sizes)"
+    ]
+  },
+  "neutrophils": {
+    "aliases": [
+      "neutrophils",
+      "neutrophil count",
+      "absolute neutrophil count",
+      "anc",
+      "neutrophils %",
+      "segs",
+      "neutrophil",
+      "neut",
+      "polymorphs",
+      "segmented neutrophils",
+      "neutrophils percent"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "%",
+    "default_range": [
+      40.0,
+      75.0
+    ],
+    "description": "Neutrophils are the most abundant type of white blood cell, acting as first responders against bacterial infections and physical trauma.",
+    "low_explanation": "A lower neutrophil proportion or count (neutropenia) can occur after viral infections, autoimmune conditions, or with certain medications.",
+    "high_explanation": "Elevated neutrophils (neutrophilia) commonly indicate bacterial infection, acute inflammation, tissue damage, or high physical stress.",
+    "questions_for_doctor": [
+      "Is this shift consistent with a recent infection or inflammatory trigger?"
+    ],
+    "display_name": "Neutrophils (%)",
+    "low_symptoms": [
+      "Frequent recurrent infections (oral thrush, boils, skin infections)",
+      "Fever without an obvious source",
+      "Painful mouth sores and tender gums",
+      "General feeling of malaise and chills"
+    ],
+    "high_symptoms": [
+      "Acute fever, chills, and shaking",
+      "Localized inflammatory pain (swollen throat, skin abscess, cough with phlegm)",
+      "Fatigue, body aches, and sweats"
+    ]
+  },
+  "lymphocytes": {
+    "aliases": [
+      "lymphocytes",
+      "lymphocyte count",
+      "lymphocytes %",
+      "lymphs",
+      "lymphocyte",
+      "lymph",
+      "lymphocyte percent"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "%",
+    "default_range": [
+      20.0,
+      45.0
+    ],
+    "description": "Lymphocytes (T-cells, B-cells, NK-cells) are vital immune cells that produce antibodies and fight viral infections.",
+    "low_explanation": "Low lymphocytes (lymphopenia) may occur temporarily with viral illness, steroid use, or severe stress.",
+    "high_explanation": "High lymphocytes (lymphocytosis) commonly occur during or after viral infections (such as mononucleosis, colds, flu) as your immune system mounts a defense.",
+    "questions_for_doctor": [
+      "Could a recent viral illness explain elevated lymphocytes?"
+    ],
+    "display_name": "Lymphocytes (%)",
+    "low_symptoms": [
+      "Frequent respiratory or viral infections",
+      "Prolonged recovery from simple illnesses",
+      "General fatigue and muscle weakness"
+    ],
+    "high_symptoms": [
+      "Swollen lymph nodes in neck, armpits, or groin",
+      "Low-grade fever, sore throat, or body aches (recent viral illness)",
+      "Fatigue, mild night sweats, and loss of appetite"
+    ]
+  },
+  "fasting_glucose": {
+    "aliases": [
+      "glucose",
+      "fasting blood sugar",
+      "fbs",
+      "fasting glucose",
+      "blood glucose",
+      "serum glucose",
+      "glucose fasting",
+      "blood sugar fasting"
+    ],
+    "category": "Metabolic Panel (CMP)",
+    "unit": "mg/dL",
+    "default_range": [
+      70.0,
+      99.0
+    ],
+    "description": "Blood glucose is the primary sugar circulating in your bloodstream, supplying cellular energy throughout your body.",
+    "low_explanation": "Your blood glucose is lower than the reference interval (hypoglycemia). Low blood sugar can cause shakiness, sweating, or dizziness, and may occur with prolonged fasting, strenuous exertion, or diabetes medications.",
+    "high_explanation": "Your fasting glucose is above the standard reference interval (hyperglycemia). Mildly elevated fasting levels (100–125 mg/dL) may indicate impaired fasting glucose (prediabetes), while higher levels may indicate diabetes. Acute stress, illness, or non-fasting status can also elevate glucose.",
+    "questions_for_doctor": [
+      "Was this test performed under strictly fasting conditions?",
+      "Would checking an HbA1c test provide a better look at my 3-month blood sugar average?"
+    ],
+    "display_name": "Fasting Blood Glucose",
+    "low_symptoms": [
+      "Shakiness, trembling, or sudden tremors in hands",
+      "Cold, clammy sweating and pale skin",
+      "Heart palpitations or rapid pulse",
+      "Intense sudden hunger, dizziness, and confusion",
+      "Anxiety, irritability, or lightheadedness"
+    ],
+    "high_symptoms": [
+      "Polydipsia (constant, unquenchable thirst)",
+      "Polyuria (frequent urination, especially at night)",
+      "Blurred or fluctuating vision",
+      "Dry mouth and itchy skin",
+      "Fatigue, sluggishness, and slow wound healing",
+      "Unexplained weight loss despite normal appetite"
+    ]
+  },
+  "hba1c": {
+    "aliases": [
+      "hba1c",
+      "glycated hemoglobin",
+      "hemoglobin a1c",
+      "a1c",
+      "glycosylated hemoglobin"
+    ],
+    "category": "Metabolic Panel (CMP)",
+    "unit": "%",
+    "default_range": [
+      4.0,
+      5.6
+    ],
+    "description": "HbA1c reflects your average blood glucose levels over the preceding 2 to 3 months by measuring sugar bound to hemoglobin.",
+    "low_explanation": "A low HbA1c is generally not problematic unless linked to frequent hypoglycemic episodes or conditions with shortened red blood cell lifespan.",
+    "high_explanation": "An HbA1c between 5.7% and 6.4% indicates prediabetes, while 6.5% or higher on two separate tests suggests diabetes. This test is a cornerstone for metabolic and glycemic monitoring.",
+    "questions_for_doctor": [
+      "What lifestyle or dietary modifications can help bring this HbA1c into target range?",
+      "What is my individualized target HbA1c level?"
+    ],
+    "display_name": "Glycated Hemoglobin (HbA1c)",
+    "low_symptoms": [
+      "Shakiness, cold sweat, hunger pangs, dizziness (episodes of hypoglycemia)"
+    ],
+    "high_symptoms": [
+      "Excessive thirst, frequent urination, dry mouth",
+      "Chronic fatigue, lethargy, and poor energy levels",
+      "Blurred vision, numbness or tingling in feet/toes",
+      "Recurrent infections or skin boils"
+    ]
+  },
+  "creatinine": {
+    "aliases": [
+      "creatinine",
+      "serum creatinine",
+      "creatinine serum",
+      "sr creatinine",
+      "s creatinine",
+      "blood creatinine"
+    ],
+    "category": "Renal Function (Kidney)",
+    "unit": "mg/dL",
+    "default_range": [
+      0.6,
+      1.3
+    ],
+    "description": "Creatinine is a normal metabolic waste product produced by muscle breakdown, filtered almost entirely out of the blood by healthy kidneys.",
+    "low_explanation": "Low serum creatinine is relatively uncommon and typically reflects low muscle mass, advanced age, or a low-protein diet.",
+    "high_explanation": "Elevated creatinine suggests decreased kidney filtration capacity. However, temporary elevations also occur with acute dehydration, intense weightlifting, or high dietary creatine intake.",
+    "questions_for_doctor": [
+      "Could dehydration or strenuous exercise have affected my creatinine?",
+      "What is my calculated eGFR (estimated glomerular filtration rate)?"
+    ],
+    "display_name": "Serum Creatinine",
+    "low_symptoms": [
+      "Muscle weakness, reduced muscle mass, fatigue"
+    ],
+    "high_symptoms": [
+      "Puffiness or swelling (edema) in ankles, feet, or around eyes",
+      "Fatigue, brain fog, and low energy",
+      "Decreased urine output, foamy urine, or darker urine",
+      "Nausea, metallic taste in mouth, or loss of appetite",
+      "Shortness of breath or itching skin"
+    ]
+  },
+  "blood_urea_nitrogen": {
+    "aliases": [
+      "blood urea nitrogen",
+      "bun",
+      "urea",
+      "blood urea",
+      "serum urea"
+    ],
+    "category": "Renal Function (Kidney)",
+    "unit": "mg/dL",
+    "default_range": [
+      7.0,
+      20.0
+    ],
+    "description": "Blood Urea Nitrogen measures the amount of nitrogen in your blood that comes from the waste product urea, produced in the liver and eliminated by the kidneys.",
+    "low_explanation": "Low BUN is uncommon and can be seen with low-protein diets, high fluid intake, or severe liver dysfunction.",
+    "high_explanation": "Elevated BUN can occur with reduced kidney function, dehydration, high-protein intake, gastrointestinal bleeding, or congestive heart failure. Dehydration is the most frequent mild cause.",
+    "questions_for_doctor": [
+      "What does my BUN-to-creatinine ratio suggest about my hydration status?"
+    ],
+    "display_name": "Blood Urea Nitrogen (BUN)",
+    "low_symptoms": [
+      "Often asymptomatic; may accompany low-protein diets or overhydration"
+    ],
+    "high_symptoms": [
+      "Dehydration symptoms: dry mouth, thirst, fatigue",
+      "Nausea, reduced appetite, and lethargy",
+      "Puffiness in lower legs and face"
+    ]
+  },
+  "egfr": {
+    "aliases": [
+      "egfr",
+      "estimated gfr",
+      "glomerular filtration rate",
+      "gfr",
+      "estimated glomerular filtration rate"
+    ],
+    "category": "Renal Function (Kidney)",
+    "unit": "mL/min/1.73m2",
+    "default_range": [
+      90.0,
+      150.0
+    ],
+    "description": "Estimated Glomerular Filtration Rate estimates how efficiently your kidneys are filtering waste from your blood, calculated from creatinine, age, and sex.",
+    "low_explanation": "An eGFR below 90 mL/min (and especially below 60 mL/min for more than 3 months) may indicate reduced kidney function. Hydration status and muscle mass can influence this calculation.",
+    "high_explanation": "High eGFR values above 90–120 mL/min indicate robust filtration efficiency and are normal in healthy adults.",
+    "questions_for_doctor": [
+      "Is my eGFR stable compared to prior blood tests?",
+      "Are there medications I take that should be dosed according to kidney function?"
+    ],
+    "display_name": "Estimated GFR (eGFR)",
+    "low_symptoms": [
+      "Fluid retention, swelling in legs or face, fatigue",
+      "Changes in urination frequency or foamy appearance",
+      "Nausea, metallic taste, itchy dry skin"
+    ],
+    "high_symptoms": [
+      "Generally healthy normal or hyperfiltration (pregnancy, early diabetes)"
+    ]
+  },
+  "sodium": {
+    "aliases": [
+      "sodium",
+      "serum sodium",
+      "sodium serum",
+      "na+",
+      "na",
+      "serum na",
+      "sodium na"
+    ],
+    "category": "Electrolytes",
+    "unit": "mEq/L",
+    "default_range": [
+      135.0,
+      145.0
+    ],
+    "description": "Sodium is the primary extracellular electrolyte, regulating total body water balance, blood pressure, and nerve and muscle function.",
+    "low_explanation": "Low sodium (hyponatremia) can cause fatigue, headache, nausea, or confusion. Causes include excess fluid intake, diuretics, heart failure, or hormonal changes.",
+    "high_explanation": "High sodium (hypernatremia) usually reflects water deficit (dehydration) relative to sodium intake, or impaired thirst mechanism.",
+    "questions_for_doctor": [
+      "Does this electrolyte level relate to my fluid intake or diuretic medications?"
+    ],
+    "display_name": "Serum Sodium",
+    "low_symptoms": [
+      "Nausea, vomiting, headache, and confusion",
+      "Muscle cramps, spasms, or profound weakness",
+      "Restlessness, drowsiness, and unsteady balance"
+    ],
+    "high_symptoms": [
+      "Extreme thirst and intense dry mouth",
+      "Restlessness, agitation, or confusion",
+      "Muscle twitching or stiffness",
+      "Lethargy and weakness"
+    ]
+  },
+  "potassium": {
+    "aliases": [
+      "potassium",
+      "serum potassium",
+      "potassium serum",
+      "k+",
+      "k",
+      "serum k",
+      "potassium k"
+    ],
+    "category": "Electrolytes",
+    "unit": "mEq/L",
+    "default_range": [
+      3.5,
+      5.2
+    ],
+    "description": "Potassium is an essential intracellular electrolyte vital for cardiac rhythm, neuromuscular transmission, and fluid balance.",
+    "low_explanation": "Low potassium (hypokalemia) may cause muscle cramps, weakness, or cardiac arrhythmias. Frequent causes include diuretic use, vomiting, diarrhea, or low dietary intake.",
+    "high_explanation": "High potassium (hyperkalemia) is a significant finding that can affect heart rhythm. Causes include reduced kidney excretion, ACE inhibitors, dehydration, or sample hemolysis during blood draw.",
+    "questions_for_doctor": [
+      "Could hemolyzed blood sample artifact have contributed to this potassium level?",
+      "Do any of my medications or supplements influence potassium levels?"
+    ],
+    "display_name": "Serum Potassium",
+    "low_symptoms": [
+      "Muscle weakness, twitching, or painful calf cramps",
+      "Constipation, bloating, or abdominal cramping",
+      "Heart palpitations, fluttering, or irregular rhythm",
+      "Extreme fatigue and tingling sensations"
+    ],
+    "high_symptoms": [
+      "Palpitations, slow heart rate, or chest discomfort",
+      "Muscle weakness or feeling heavy in the limbs",
+      "Numbness, tingling in fingers and lips",
+      "Nausea, shortness of breath, and dizziness"
+    ]
+  },
+  "calcium": {
+    "aliases": [
+      "calcium",
+      "serum calcium",
+      "total calcium",
+      "ca++",
+      "ca2+",
+      "serum ca",
+      "ca"
+    ],
+    "category": "Electrolytes & Minerals",
+    "unit": "mg/dL",
+    "default_range": [
+      8.5,
+      10.5
+    ],
+    "description": "Calcium is crucial for bone structural integrity, nerve signal transmission, muscle contraction, and blood clotting.",
+    "low_explanation": "Low calcium (hypocalcemia) can cause muscle twitches or tingling. It may stem from low vitamin D, parathyroid gland changes, or low serum albumin.",
+    "high_explanation": "High calcium (hypercalcemia) can cause fatigue, kidney stones, or digestive distress. Common causes include primary hyperparathyroidism or high vitamin D intake.",
+    "questions_for_doctor": [
+      "Should corrected calcium or ionized calcium be calculated based on my albumin?",
+      "Would it be wise to check my parathyroid hormone (PTH) and Vitamin D?"
+    ],
+    "display_name": "Serum Calcium",
+    "low_symptoms": [
+      "Muscle cramps, spasms, or twitches in face and hands",
+      "Numbness and tingling around mouth and fingertips",
+      "Dry skin, brittle nails, and muscle aching"
+    ],
+    "high_symptoms": [
+      "Excessive thirst, frequent urination, and constipation",
+      "Bone or joint pain, abdominal cramps, and nausea",
+      "Lethargy, confusion, memory fog, and fatigue"
+    ]
+  },
+  "total_cholesterol": {
+    "aliases": [
+      "total cholesterol",
+      "cholesterol total",
+      "serum cholesterol",
+      "total serum cholesterol",
+      "cholesterol",
+      "sr cholesterol"
+    ],
+    "category": "Lipid Panel",
+    "unit": "mg/dL",
+    "default_range": [
+      125.0,
+      200.0
+    ],
+    "description": "Total cholesterol measures the cumulative cholesterol contained in all lipoprotein particles in your bloodstream.",
+    "low_explanation": "Very low total cholesterol is uncommon and can occasionally indicate malabsorption, hyperthyroidism, or severe malnutrition.",
+    "high_explanation": "Elevated total cholesterol is an established risk factor for cardiovascular disease. It is best interpreted alongside specific HDL, LDL, and non-HDL fractions.",
+    "questions_for_doctor": [
+      "What is my overall 10-year cardiovascular risk assessment?",
+      "What dietary, exercise, or medical strategies are most suitable for my lipid profile?"
+    ],
+    "display_name": "Total Cholesterol",
+    "low_symptoms": [
+      "Usually asymptomatic; very low levels may correlate with malnutrition or hyperthyroidism"
+    ],
+    "high_symptoms": [
+      "Usually asymptomatic in early stages (silent risk factor)",
+      "Yellowish deposits around eyes (xanthelasma) in severe chronic elevations",
+      "Chest pressure, shortness of breath during exertion (if coronary arteries involved)"
+    ]
+  },
+  "hdl_cholesterol": {
+    "aliases": [
+      "hdl",
+      "hdl cholesterol",
+      "high density lipoprotein",
+      "good cholesterol",
+      "hdl-c"
+    ],
+    "category": "Lipid Panel",
+    "unit": "mg/dL",
+    "default_range": [
+      40.0,
+      80.0
+    ],
+    "description": "HDL ('good') cholesterol scavenges excess cholesterol from arteries and returns it to the liver for excretion.",
+    "low_explanation": "Low HDL cholesterol (<40 mg/dL for men, <50 mg/dL for women) is associated with higher cardiovascular risk. Physical inactivity, smoking, insulin resistance, and dietary factors can lower HDL.",
+    "high_explanation": "Higher HDL cholesterol (above 60 mg/dL) is generally considered protective against cardiovascular events.",
+    "questions_for_doctor": [
+      "What aerobic exercises or dietary habits can help optimize my HDL level?"
+    ],
+    "display_name": "HDL Cholesterol (Good)",
+    "low_symptoms": [
+      "Silent risk factor; no direct physical symptoms but increases cardiovascular risk"
+    ],
+    "high_symptoms": [
+      "Favorable cardiovascular marker; generally asymptomatic and protective"
+    ]
+  },
+  "ldl_cholesterol": {
+    "aliases": [
+      "ldl",
+      "ldl cholesterol",
+      "low density lipoprotein",
+      "bad cholesterol",
+      "ldl-c"
+    ],
+    "category": "Lipid Panel",
+    "unit": "mg/dL",
+    "default_range": [
+      0.0,
+      100.0
+    ],
+    "description": "LDL ('bad') cholesterol carries cholesterol particles into arterial walls, where excess accumulation can form atherosclerotic plaques.",
+    "low_explanation": "Low LDL is generally favorable for cardiovascular health, especially in individuals with established risk factors.",
+    "high_explanation": "Elevated LDL cholesterol increases the risk of arterial plaque formation and cardiovascular disease. Optimal target levels vary significantly based on your individual cardiovascular risk profile.",
+    "questions_for_doctor": [
+      "What is my personalized LDL target based on my health history and family history?",
+      "Would lifestyle changes be the first approach, or is medical therapy indicated?"
+    ],
+    "display_name": "LDL Cholesterol (Bad)",
+    "low_symptoms": [
+      "Generally asymptomatic and cardioprotective"
+    ],
+    "high_symptoms": [
+      "Typically silent without noticeable day-to-day symptoms",
+      "Contributes to plaque buildup in arteries over time"
+    ]
+  },
+  "triglycerides": {
+    "aliases": [
+      "triglycerides",
+      "tg",
+      "serum triglycerides",
+      "triglyceride"
+    ],
+    "category": "Lipid Panel",
+    "unit": "mg/dL",
+    "default_range": [
+      0.0,
+      150.0
+    ],
+    "description": "Triglycerides are the primary type of fat stored in your body, derived from dietary fats and converted carbohydrates.",
+    "low_explanation": "Low triglyceride levels are typically benign and seen with very low-fat diets, hyperthyroidism, or malabsorption.",
+    "high_explanation": "High triglycerides (>150 mg/dL) increase cardiovascular risk and are frequently linked with metabolic syndrome, insulin resistance, high sugar/alcohol intake, or sedentary lifestyle. Very high levels (>500 mg/dL) require prompt attention to protect the pancreas.",
+    "questions_for_doctor": [
+      "How do my refined carbohydrate, sugar, and alcohol consumption affect these results?",
+      "Was this test drawn in a fasting state?"
+    ],
+    "display_name": "Triglycerides",
+    "low_symptoms": [
+      "Asymptomatic; associated with low-fat diet or hyperthyroidism"
+    ],
+    "high_symptoms": [
+      "Usually asymptomatic; severe elevations (>500 mg/dL) can trigger severe abdominal pain (pancreatitis)",
+      "Fatigue, sluggishness, and fatty deposits on skin (eruptive xanthomas)"
+    ]
+  },
+  "alt": {
+    "aliases": [
+      "alt",
+      "alanine aminotransferase",
+      "sgpt",
+      "alt (sgpt)",
+      "alanine transaminase",
+      "sgpt alt"
+    ],
+    "category": "Liver Function Panel",
+    "unit": "U/L",
+    "default_range": [
+      7.0,
+      56.0
+    ],
+    "description": "ALT is an enzyme concentrated primarily in liver cells that enters the bloodstream when liver cells experience stress or injury.",
+    "low_explanation": "Low ALT values are typical and generally have no clinical concern.",
+    "high_explanation": "Elevated ALT suggests hepatocellular irritation or damage. Common causes include fatty liver disease (metabolic dysfunction-associated steatotic liver disease), alcohol use, viral hepatitis, certain medications (including statins or acetaminophen), or strenuous exercise.",
+    "questions_for_doctor": [
+      "Could any medications, herbal supplements, or alcohol have irritated my liver?",
+      "Would a liver ultrasound or viral hepatitis screen be indicated?"
+    ],
+    "display_name": "Alanine Aminotransferase (ALT / SGPT)",
+    "low_symptoms": [
+      "Normal physiological finding; no adverse symptoms"
+    ],
+    "high_symptoms": [
+      "Persistent fatigue, weakness, and loss of appetite",
+      "Nausea, mild abdominal bloating, or upper right quadrant discomfort",
+      "Jaundice (yellowish tint to eyes or skin)",
+      "Dark tea-colored urine and pale stools"
+    ]
+  },
+  "ast": {
+    "aliases": [
+      "ast",
+      "aspartate aminotransferase",
+      "sgot",
+      "ast (sgot)",
+      "aspartate transaminase",
+      "sgot ast"
+    ],
+    "category": "Liver Function Panel",
+    "unit": "U/L",
+    "default_range": [
+      10.0,
+      40.0
+    ],
+    "description": "AST is an enzyme found in the liver, heart, skeletal muscle, and kidneys.",
+    "low_explanation": "Low AST is normal and carries no adverse clinical significance.",
+    "high_explanation": "High AST indicates cellular stress in the liver, heart, or skeletal muscle. An elevated AST alongside elevated ALT strongly points toward liver etiology.",
+    "questions_for_doctor": [
+      "What does the AST/ALT ratio suggest about possible liver or muscle causes?",
+      "Did recent heavy muscular exercise contribute to this result?"
+    ],
+    "display_name": "Aspartate Aminotransferase (AST / SGOT)",
+    "low_symptoms": [
+      "Normal finding; no clinical symptoms"
+    ],
+    "high_symptoms": [
+      "Fatigue, generalized malaise, nausea",
+      "Discomfort under the right ribcage",
+      "Dark urine, yellowing of eyes/skin, easy bruising"
+    ]
+  },
+  "total_bilirubin": {
+    "aliases": [
+      "total bilirubin",
+      "bilirubin total",
+      "serum bilirubin total",
+      "serum bilirubin",
+      "t bilirubin",
+      "t. bilirubin",
+      "bilirubin",
+      "sr bilirubin"
+    ],
+    "category": "Liver Function Panel",
+    "unit": "mg/dL",
+    "default_range": [
+      0.2,
+      1.2
+    ],
+    "description": "Bilirubin is a yellowish compound produced during the normal breakdown of red blood cells, processed by the liver and excreted in bile.",
+    "low_explanation": "Low bilirubin levels are completely normal and not associated with any medical conditions.",
+    "high_explanation": "Elevated bilirubin can cause jaundice (yellowing of skin or eyes). Mild elevations with normal liver enzymes are frequently due to Gilbert's syndrome (a harmless genetic trait). Other causes include biliary tract issues or hemolytic conditions.",
+    "questions_for_doctor": [
+      "Is the elevated bilirubin predominantly conjugated (direct) or unconjugated (indirect)?",
+      "Could a benign variation like Gilbert's syndrome explain this finding?"
+    ],
+    "display_name": "Total Bilirubin",
+    "low_symptoms": [
+      "Typically benign; no symptoms"
+    ],
+    "high_symptoms": [
+      "Jaundice: distinct yellowing of the sclera (white of eyes) and skin",
+      "Dark, tea-colored urine",
+      "Pale, clay-colored bowel movements",
+      "Pruritus (generalized skin itching)",
+      "Nausea, loss of appetite, and upper right abdominal tenderness"
+    ]
+  },
+  "tsh": {
+    "aliases": [
+      "tsh",
+      "thyroid stimulating hormone",
+      "thyrotropin",
+      "ultrasensitive tsh"
+    ],
+    "category": "Thyroid Function",
+    "unit": "uIU/mL",
+    "default_range": [
+      0.4,
+      4.0
+    ],
+    "description": "Thyroid Stimulating Hormone is released by the pituitary gland to regulate the thyroid gland's production of metabolic hormones (T3 and T4).",
+    "low_explanation": "A low TSH indicates the thyroid gland may be overactive (hyperthyroidism), producing excess hormones that suppress pituitary TSH secretion.",
+    "high_explanation": "An elevated TSH suggests an underactive thyroid gland (hypothyroidism). The pituitary produces extra TSH in an effort to stimulate sluggish thyroid hormone production.",
+    "questions_for_doctor": [
+      "Should Free T4 and Free T3 be measured to evaluate thyroid activity accurately?",
+      "Would thyroid antibody testing (anti-TPO) help identify an autoimmune cause?"
+    ],
+    "display_name": "Thyroid Stimulating Hormone (TSH)",
+    "low_symptoms": [
+      "Hyperthyroidism symptoms: unintended weight loss despite increased appetite",
+      "Heat intolerance, excessive sweating, and warm moist skin",
+      "Rapid or pounding heart rate (palpitations)",
+      "Nervousness, anxiety, hand tremors, and insomnia",
+      "Frequent bowel movements or diarrhea"
+    ],
+    "high_symptoms": [
+      "Hypothyroidism symptoms: persistent fatigue, sluggishness, and brain fog",
+      "Unexplained weight gain or difficulty losing weight",
+      "Cold intolerance, feeling chilled when others are comfortable",
+      "Dry skin, hair thinning, and brittle nails",
+      "Constipation, muscle aches, and puffy face"
+    ]
+  },
+  "crp": {
+    "aliases": [
+      "crp",
+      "c-reactive protein",
+      "hs-crp",
+      "c reactive protein",
+      "hscrp"
+    ],
+    "category": "Inflammatory Markers",
+    "unit": "mg/L",
+    "default_range": [
+      0.0,
+      3.0
+    ],
+    "description": "C-Reactive Protein is an acute-phase protein synthesized by the liver in response to systemic inflammation, infection, or vascular stress.",
+    "low_explanation": "Low CRP levels are favorable and indicate minimal systemic inflammatory activity.",
+    "high_explanation": "Elevated CRP reflects active inflammation. Causes range from acute bacterial or viral infections, autoimmune diseases (rheumatoid arthritis, lupus), to chronic metabolic and vascular inflammation.",
+    "questions_for_doctor": [
+      "Does this elevation correlate with a recent minor infection, injury, or chronic inflammation?",
+      "Should we recheck this marker in several weeks after any acute illness has resolved?"
+    ],
+    "display_name": "C-Reactive Protein (CRP)",
+    "low_symptoms": [
+      "Optimal baseline level; indicates absence of significant systemic inflammation"
+    ],
+    "high_symptoms": [
+      "Fever, night chills, and generalized fatigue",
+      "Muscle and joint stiffness, aching, or swelling",
+      "Localized warmth, pain, or redness at an injury or infection site"
+    ]
+  },
+  "direct_bilirubin": {
+    "aliases": [
+      "direct bilirubin",
+      "conjugated bilirubin",
+      "bilirubin direct",
+      "d bilirubin",
+      "d. bilirubin"
+    ],
+    "category": "Liver Function Panel",
+    "unit": "mg/dL",
+    "default_range": [
+      0.0,
+      0.3
+    ],
+    "description": "Direct (conjugated) bilirubin is water-soluble bilirubin processed by the liver and excreted into bile.",
+    "low_explanation": "Low direct bilirubin is normal and has no adverse clinical implications.",
+    "high_explanation": "Elevated direct bilirubin indicates impaired bile excretion from liver cells or biliary duct obstruction (e.g. gallstones, strictures, or hepatitis).",
+    "questions_for_doctor": [
+      "Does elevated direct bilirubin suggest a biliary obstruction or liver parenchyma concern?",
+      "Would an abdominal ultrasound or further liver imaging be advised?"
+    ],
+    "display_name": "Direct Bilirubin",
+    "low_symptoms": [
+      "Symptoms associated with low Direct Bilirubin; discuss with your doctor."
+    ],
+    "high_symptoms": [
+      "Symptoms associated with elevated Direct Bilirubin; discuss with your doctor."
+    ]
+  },
+  "indirect_bilirubin": {
+    "aliases": [
+      "indirect bilirubin",
+      "unconjugated bilirubin",
+      "bilirubin indirect"
+    ],
+    "category": "Liver Function Panel",
+    "unit": "mg/dL",
+    "default_range": [
+      0.2,
+      0.8
+    ],
+    "description": "Indirect (unconjugated) bilirubin travels bound to albumin to the liver after red blood cell breakdown.",
+    "low_explanation": "Low indirect bilirubin is normal.",
+    "high_explanation": "Elevated indirect bilirubin commonly occurs with accelerated red blood cell destruction (hemolysis) or reduced hepatic conjugation (such as Gilbert's syndrome).",
+    "questions_for_doctor": [
+      "Could Gilbert's syndrome or benign hemolysis explain this indirect bilirubin level?"
+    ],
+    "display_name": "Indirect Bilirubin",
+    "low_symptoms": [
+      "Symptoms associated with low Indirect Bilirubin; discuss with your doctor."
+    ],
+    "high_symptoms": [
+      "Symptoms associated with elevated Indirect Bilirubin; discuss with your doctor."
+    ]
+  },
+  "alkaline_phosphatase": {
+    "aliases": [
+      "alkaline phosphatase",
+      "alp",
+      "alk phos",
+      "s alp",
+      "serum alkaline phosphatase"
+    ],
+    "category": "Liver Function Panel",
+    "unit": "U/L",
+    "default_range": [
+      44.0,
+      147.0
+    ],
+    "description": "Alkaline phosphatase (ALP) is an enzyme concentrated in the bile ducts of the liver and in bone tissue.",
+    "low_explanation": "Low ALP is uncommon and may be associated with malnutrition, severe zinc deficiency, or Wilson's disease.",
+    "high_explanation": "Elevated ALP frequently points toward biliary duct irritation/obstruction, bone remodeling or growth, liver inflammation, or pregnancy.",
+    "questions_for_doctor": [
+      "Does this ALP elevation stem from a hepatic/biliary or a bone origin?",
+      "Would a GGT (gamma-glutamyl transferase) test help clarify the origin?"
+    ],
+    "display_name": "Alkaline Phosphatase",
+    "low_symptoms": [
+      "Symptoms associated with low Alkaline Phosphatase; discuss with your doctor."
+    ],
+    "high_symptoms": [
+      "Symptoms associated with elevated Alkaline Phosphatase; discuss with your doctor."
+    ]
+  },
+  "total_protein": {
+    "aliases": [
+      "total protein",
+      "protein total",
+      "serum protein",
+      "total serum protein",
+      "tp"
+    ],
+    "category": "Liver Function Panel",
+    "unit": "g/dL",
+    "default_range": [
+      6.0,
+      8.3
+    ],
+    "description": "Total protein measures the two main classes of proteins in blood: albumin and globulin.",
+    "low_explanation": "Low total protein can indicate decreased liver synthesis, kidney protein loss (nephrotic syndrome), or malabsorption.",
+    "high_explanation": "High total protein can be caused by dehydration or elevated immunoglobulin production in chronic inflammation or bone marrow conditions.",
+    "questions_for_doctor": [
+      "What does the balance between albumin and globulin indicate?",
+      "Could dehydration have concentrated my blood proteins?"
+    ],
+    "display_name": "Total Protein",
+    "low_symptoms": [
+      "Symptoms associated with low Total Protein; discuss with your doctor."
+    ],
+    "high_symptoms": [
+      "Symptoms associated with elevated Total Protein; discuss with your doctor."
+    ]
+  },
+  "albumin": {
+    "aliases": [
+      "albumin",
+      "serum albumin",
+      "alb"
+    ],
+    "category": "Liver Function Panel",
+    "unit": "g/dL",
+    "default_range": [
+      3.5,
+      5.0
+    ],
+    "description": "Albumin is the most abundant blood protein, synthesized exclusively by the liver to maintain oncotic pressure and transport hormones.",
+    "low_explanation": "Low albumin (hypoalbuminemia) may indicate liver disease, malnutrition, chronic inflammation, or renal protein loss.",
+    "high_explanation": "Elevated albumin almost exclusively reflects dehydration and hemoconcentration.",
+    "questions_for_doctor": [
+      "Could poor protein intake, inflammation, or kidney loss account for low albumin?"
+    ],
+    "display_name": "Albumin",
+    "low_symptoms": [
+      "Symptoms associated with low Albumin; discuss with your doctor."
+    ],
+    "high_symptoms": [
+      "Symptoms associated with elevated Albumin; discuss with your doctor."
+    ]
+  },
+  "globulin": {
+    "aliases": [
+      "globulin",
+      "serum globulin"
+    ],
+    "category": "Liver Function Panel",
+    "unit": "g/dL",
+    "default_range": [
+      2.0,
+      3.5
+    ],
+    "description": "Globulins include enzymes, carrier proteins, and antibodies (immunoglobulins) produced by the immune system and liver.",
+    "low_explanation": "Low globulin can occur with immunodeficiency conditions or kidney protein wasting.",
+    "high_explanation": "Elevated globulin is common with chronic infections, autoimmune diseases, or plasma cell disorders.",
+    "questions_for_doctor": [
+      "Does high globulin suggest an active immune response or chronic inflammation?"
+    ],
+    "display_name": "Globulin",
+    "low_symptoms": [
+      "Symptoms associated with low Globulin; discuss with your doctor."
+    ],
+    "high_symptoms": [
+      "Symptoms associated with elevated Globulin; discuss with your doctor."
+    ]
+  },
+  "ag_ratio": {
+    "aliases": [
+      "ag ratio",
+      "a/g ratio",
+      "albumin globulin ratio",
+      "albumin/globulin ratio"
+    ],
+    "category": "Liver Function Panel",
+    "unit": "ratio",
+    "default_range": [
+      1.0,
+      2.2
+    ],
+    "description": "The A/G ratio evaluates the proportional balance between albumin and globulin fractions.",
+    "low_explanation": "A low A/G ratio can occur with low albumin (liver/kidney disease) or excess globulin (autoimmune/chronic infection).",
+    "high_explanation": "A high A/G ratio is generally benign and may be seen with low globulin levels or genetic variations.",
+    "questions_for_doctor": [
+      "What does this ratio indicate about my liver function and immune status?"
+    ],
+    "display_name": "Ag Ratio",
+    "low_symptoms": [
+      "Symptoms associated with low Ag Ratio; discuss with your doctor."
+    ],
+    "high_symptoms": [
+      "Symptoms associated with elevated Ag Ratio; discuss with your doctor."
+    ]
+  },
+  "uric_acid": {
+    "aliases": [
+      "uric acid",
+      "serum uric acid",
+      "urate",
+      "sr uric acid",
+      "serum urate"
+    ],
+    "category": "Renal Function (Kidney)",
+    "unit": "mg/dL",
+    "default_range": [
+      3.5,
+      7.2
+    ],
+    "description": "Uric acid is a normal chemical waste product generated when your body digests foods rich in purines.",
+    "low_explanation": "Low uric acid is relatively rare and usually has little clinical consequence.",
+    "high_explanation": "Elevated uric acid (hyperuricemia) can crystallize in joints causing painful gout attacks, or form uric acid kidney stones.",
+    "questions_for_doctor": [
+      "Have I experienced any joint pain, swelling, or symptoms of gout?",
+      "What dietary purine adjustments (red meat, seafood, alcohol, fructose) would help?"
+    ],
+    "display_name": "Serum Uric Acid",
+    "low_symptoms": [
+      "Usually benign and produces no symptoms"
+    ],
+    "high_symptoms": [
+      "Sudden, severe, throbbing joint pain (typically big toe, ankle, or knee)",
+      "Intense redness, swelling, and extreme sensitivity to touch in affected joint",
+      "Flank or lower back pain (if uric acid kidney stones develop)"
+    ]
+  },
+  "esr": {
+    "aliases": [
+      "esr",
+      "erythrocyte sedimentation rate",
+      "sed rate",
+      "sedimentation rate",
+      "erythrocyte sed rate"
+    ],
+    "category": "Inflammatory Markers",
+    "unit": "mm/hr",
+    "default_range": [
+      0.0,
+      20.0
+    ],
+    "description": "ESR measures the speed at which red blood cells settle at the bottom of a test tube, indicating systemic inflammatory activity.",
+    "low_explanation": "A low ESR indicates absence of significant systemic inflammation and is a normal, reassuring finding.",
+    "high_explanation": "An elevated ESR indicates higher systemic inflammation from infections, autoimmune conditions, tissue injury, or anemia.",
+    "questions_for_doctor": [
+      "Could a recent infection, joint inflammation, or tissue healing explain this ESR?",
+      "Should additional specific inflammatory markers like CRP be monitored?"
+    ],
+    "display_name": "Erythrocyte Sedimentation Rate (ESR)",
+    "low_symptoms": [
+      "Generally normal and indicates absence of acute inflammatory activity"
+    ],
+    "high_symptoms": [
+      "Persistent fatigue, low-grade fever, and malaise",
+      "Joint pain, morning stiffness, or headache",
+      "Unexplained weight loss and generalized body aches"
+    ]
+  },
+  "eosinophils": {
+    "aliases": [
+      "eosinophils",
+      "eosinophils %",
+      "absolute eosinophil count",
+      "aec",
+      "eos",
+      "eosinophil",
+      "eosinophil percent"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "%",
+    "default_range": [
+      1.0,
+      6.0
+    ],
+    "description": "Eosinophils are specialized white blood cells that target parasitic infections and modulate allergic responses.",
+    "low_explanation": "Low eosinophils are generally not clinically concerning.",
+    "high_explanation": "Elevated eosinophils (eosinophilia) most frequently reflect allergies, asthma, drug reactions, or parasitic infections.",
+    "questions_for_doctor": [
+      "Could seasonal allergies, asthma, or a recent medication reaction have caused this elevation?"
+    ],
+    "display_name": "Eosinophils (%)",
+    "low_symptoms": [
+      "Typically asymptomatic; may accompany acute bacterial stress or steroid use"
+    ],
+    "high_symptoms": [
+      "Allergic symptoms: hives, skin itching, eczema, or rash",
+      "Nasal congestion, sneezing, runny nose, or watery eyes",
+      "Wheezing, shortness of breath, or asthma flares",
+      "Digestive discomfort, abdominal cramps, or bloating"
+    ]
+  },
+  "monocytes": {
+    "aliases": [
+      "monocytes",
+      "monocytes %",
+      "mono",
+      "monocyte",
+      "monocyte percent"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "%",
+    "default_range": [
+      2.0,
+      10.0
+    ],
+    "description": "Monocytes are phagocytic white blood cells that migrate into tissues to clear cellular debris and fight chronic infections.",
+    "low_explanation": "Low monocytes can occur with bone marrow suppression or corticosteroid therapy.",
+    "high_explanation": "Elevated monocytes frequently indicate recovery from acute infection, chronic bacterial infection, or autoimmune disease.",
+    "questions_for_doctor": [
+      "Is this elevated monocyte proportion consistent with recovery from a recent illness?"
+    ],
+    "display_name": "Monocytes (%)",
+    "low_symptoms": [
+      "Increased vulnerability to fungal or bacterial infections, fatigue"
+    ],
+    "high_symptoms": [
+      "Fatigue, joint aches, and low-grade recurrent fever",
+      "Chronic inflammation symptoms: malaise, swollen lymph nodes",
+      "Night sweats and unexplained weight loss"
+    ]
+  },
+  "basophils": {
+    "aliases": [
+      "basophils",
+      "basophils %",
+      "baso",
+      "basophil",
+      "basophil percent"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "%",
+    "default_range": [
+      0.0,
+      2.0
+    ],
+    "description": "Basophils are rare white blood cells that release histamine during inflammatory and allergic responses.",
+    "low_explanation": "A low basophil count is a typical normal finding.",
+    "high_explanation": "Elevated basophils (basophilia) can be seen in chronic inflammation, allergic conditions, or myeloproliferative disorders.",
+    "questions_for_doctor": [
+      "Does this align with other differential white cell counts?"
+    ],
+    "display_name": "Basophils (%)",
+    "low_symptoms": [
+      "Generally produces no noticeable direct symptoms"
+    ],
+    "high_symptoms": [
+      "Intense skin itching (pruritus), hives, or flushing",
+      "Nasal allergies, runny nose, or asthma symptoms",
+      "Fatigue, night sweats, or unexplained weight changes"
+    ]
+  },
+  "vitamin_d": {
+    "aliases": [
+      "vitamin d",
+      "25-hydroxy vitamin d",
+      "25-oh vitamin d",
+      "vit d",
+      "vitamin d3",
+      "25 hydroxyvitamin d",
+      "vitamin d total",
+      "25 hydroxy vitamin d"
+    ],
+    "category": "Vitamins & Nutritional",
+    "unit": "ng/mL",
+    "default_range": [
+      30.0,
+      100.0
+    ],
+    "description": "25-Hydroxy Vitamin D measures your body's total stores of vitamin D, essential for bone mineralization, calcium absorption, and immune function.",
+    "low_explanation": "Vitamin D deficiency (<20 ng/mL) or insufficiency (20-29 ng/mL) is very common and can cause bone weakness, fatigue, or muscle aches.",
+    "high_explanation": "Elevated vitamin D (>100 ng/mL) usually occurs only with excessive supplementation and can lead to hypercalcemia.",
+    "questions_for_doctor": [
+      "Would Vitamin D3 supplementation be recommended to achieve optimal levels?",
+      "What dosage and follow-up recheck timeline is appropriate?"
+    ],
+    "display_name": "Vitamin D (25-OH)",
+    "low_symptoms": [
+      "Dull bone pain, lower back discomfort, and muscle weakness",
+      "Frequent colds, respiratory infections, or slow healing",
+      "Chronic fatigue, low mood, and morning muscle stiffness"
+    ],
+    "high_symptoms": [
+      "Nausea, vomiting, poor appetite, and constipation",
+      "Frequent urination, excessive thirst, and dehydration",
+      "Muscle weakness, joint aches, and confusion"
+    ]
+  },
+  "vitamin_b12": {
+    "aliases": [
+      "vitamin b12",
+      "b12",
+      "cyanocobalamin",
+      "serum cobalamin",
+      "vit b12"
+    ],
+    "category": "Vitamins & Nutritional",
+    "unit": "pg/mL",
+    "default_range": [
+      200.0,
+      900.0
+    ],
+    "description": "Vitamin B12 is essential for neurological function, red blood cell synthesis, and DNA maintenance.",
+    "low_explanation": "Low B12 can cause macrocytic anemia, tingling/numbness in hands and feet, memory issues, and fatigue.",
+    "high_explanation": "High B12 is usually secondary to supplementation, or occasionally seen in liver disease or myeloproliferative conditions.",
+    "questions_for_doctor": [
+      "Could dietary habits or malabsorption explain my B12 level?",
+      "Would oral or injectable B12 supplementation be beneficial?"
+    ],
+    "display_name": "Vitamin B12",
+    "low_symptoms": [
+      "Numbness, tingling, or 'pins and needles' in hands and feet",
+      "Chronic fatigue, weakness, and lightheadedness",
+      "Brain fog, memory lapses, and mood fluctuations",
+      "Sore, smooth, or bright red tongue (glossitis)",
+      "Unsteadiness or difficulty walking in dark"
+    ],
+    "high_symptoms": [
+      "Usually asymptomatic (water-soluble vitamin excreted in urine); may accompany liver inflammation"
+    ]
+  },
+  "ferritin": {
+    "aliases": [
+      "ferritin",
+      "serum ferritin",
+      "sr ferritin",
+      "ferritin serum"
+    ],
+    "category": "Iron & Anemia Studies",
+    "unit": "ng/mL",
+    "default_range": [
+      15.0,
+      300.0
+    ],
+    "description": "Ferritin is the primary intracellular protein that stores iron, reflecting your body's total iron reserves.",
+    "low_explanation": "Low ferritin (<15-30 ng/mL) is the most specific indicator of iron deficiency, even before hemoglobin drops.",
+    "high_explanation": "Elevated ferritin can indicate iron overload (hemochromatosis) or act as an acute phase reactant in inflammation or liver disease.",
+    "questions_for_doctor": [
+      "Does my ferritin level indicate depleted iron stores?",
+      "Is oral iron supplementation indicated?"
+    ],
+    "display_name": "Serum Ferritin",
+    "low_symptoms": [
+      "Deep fatigue, exhaustion, and shortness of breath with simple tasks",
+      "Pale skin, cold hands, brittle spoon-shaped nails, and hair shedding",
+      "Restless legs syndrome (urge to move legs at night)",
+      "Brain fog and poor exercise endurance"
+    ],
+    "high_symptoms": [
+      "Joint pain (especially in knuckles and knees)",
+      "Abdominal pain, fatigue, and weakness",
+      "Unexplained darkening or bronze tint to the skin"
+    ]
+  },
+  "iron": {
+    "aliases": [
+      "serum iron",
+      "iron",
+      "fe",
+      "iron serum"
+    ],
+    "category": "Iron & Anemia Studies",
+    "unit": "ug/dL",
+    "default_range": [
+      60.0,
+      170.0
+    ],
+    "description": "Serum iron measures the quantity of circulating iron bound to transferrin in the bloodstream.",
+    "low_explanation": "Low serum iron suggests inadequate dietary iron intake, poor intestinal absorption, or chronic blood loss.",
+    "high_explanation": "High serum iron can be seen with iron overload, multiple blood transfusions, or acute liver injury.",
+    "questions_for_doctor": [
+      "How does serum iron correlate with my ferritin and total iron binding capacity (TIBC)?"
+    ],
+    "display_name": "Iron",
+    "low_symptoms": [
+      "Symptoms associated with low Iron; discuss with your doctor."
+    ],
+    "high_symptoms": [
+      "Symptoms associated with elevated Iron; discuss with your doctor."
+    ]
+  },
+  "vldl_cholesterol": {
+    "aliases": [
+      "vldl",
+      "vldl cholesterol",
+      "very low density lipoprotein"
+    ],
+    "category": "Lipid Panel",
+    "unit": "mg/dL",
+    "default_range": [
+      5.0,
+      30.0
+    ],
+    "description": "Very Low-Density Lipoprotein (VLDL) carries triglycerides from the liver to tissues throughout the body.",
+    "low_explanation": "Low VLDL is generally considered favorable for cardiovascular health.",
+    "high_explanation": "Elevated VLDL indicates higher circulating triglyceride-rich particles, increasing cardiovascular risk.",
+    "questions_for_doctor": [
+      "How does elevated VLDL connect with my triglyceride and metabolic health?"
+    ],
+    "display_name": "Vldl Cholesterol",
+    "low_symptoms": [
+      "Symptoms associated with low Vldl Cholesterol; discuss with your doctor."
+    ],
+    "high_symptoms": [
+      "Symptoms associated with elevated Vldl Cholesterol; discuss with your doctor."
+    ]
+  },
+  "absolute_eosinophil_count": {
+    "display_name": "Absolute Eosinophil Count (AEC)",
+    "aliases": [
+      "absolute eosinophil count",
+      "absolute eosinophils",
+      "absolute ec",
+      "abs eosinophils",
+      "abs eosinophil",
+      "abs eos",
+      "aec",
+      "aec count"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "/cumm",
+    "default_range": [
+      20.0,
+      500.0
+    ],
+    "description": "The absolute number of eosinophils per microliter of blood, reflecting specialized immune activity against allergens and parasites.",
+    "low_explanation": "Your absolute eosinophil count is low. This is commonly seen with acute bacterial stress, elevated corticosteroid levels, or vigorous exercise, and is rarely a cause for concern on its own.",
+    "high_explanation": "Your absolute eosinophil count is elevated (eosinophilia). Common causes include allergic conditions (asthma, eczema, hay fever), parasitic infections, drug reactions, or inflammatory diseases.",
+    "questions_for_doctor": [
+      "Could seasonal allergies, eczema, or asthma explain this elevated eosinophil count?",
+      "Are any recent medications or dietary changes contributing to this?"
+    ],
+    "low_symptoms": [
+      "Rarely produces any noticeable physical symptoms"
+    ],
+    "high_symptoms": [
+      "Allergic symptoms: hives, skin itching, eczema, or rash",
+      "Wheezing, shortness of breath, or asthma symptoms",
+      "Nasal congestion, sneezing, runny nose, or watery eyes",
+      "Abdominal cramps or digestive sensitivity"
+    ]
+  },
+  "absolute_monocyte_count": {
+    "display_name": "Absolute Monocyte Count (AMC)",
+    "aliases": [
+      "absolute monocyte count",
+      "absolute monocytes",
+      "absolute m",
+      "abs monocytes",
+      "abs monocyte",
+      "abs mono",
+      "amc",
+      "amc count"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "/cumm",
+    "default_range": [
+      200.0,
+      950.0
+    ],
+    "description": "The absolute count of circulating monocytes, large phagocytic immune cells that clear pathogens and cellular debris.",
+    "low_explanation": "Your absolute monocyte count is below reference interval (monocytopenia). This may be seen with temporary bone marrow suppression or severe acute infections.",
+    "high_explanation": "Your absolute monocyte count is elevated (monocytosis). This frequently indicates recovery from an infection, chronic inflammatory disease, or autoimmune activity.",
+    "questions_for_doctor": [
+      "Does this reflect recovery from a recent bacterial or viral illness?",
+      "Should we monitor this on a follow-up CBC panel?"
+    ],
+    "low_symptoms": [
+      "Increased susceptibility to bacterial or fungal infections, fatigue"
+    ],
+    "high_symptoms": [
+      "Fatigue, joint stiffness, and low-grade lingering fever",
+      "Swollen lymph nodes in neck or armpits",
+      "Night sweats and muscle aches"
+    ]
+  },
+  "absolute_neutrophil_count": {
+    "display_name": "Absolute Neutrophil Count (ANC)",
+    "aliases": [
+      "absolute neutrophil count",
+      "absolute neutrophils",
+      "absolute n",
+      "abs neutrophils",
+      "abs neutrophil",
+      "abs neut",
+      "anc",
+      "anc count"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "/cumm",
+    "default_range": [
+      2000.0,
+      7500.0
+    ],
+    "description": "The exact count of circulating neutrophils, the first-responder white blood cells defending against bacterial infections.",
+    "low_explanation": "Your absolute neutrophil count is below reference interval (neutropenia). A lower ANC means reduced protection against bacterial infections. Causes include viral infections, autoimmune conditions, or certain medications.",
+    "high_explanation": "Your absolute neutrophil count is elevated (neutrophilia). This is a hallmark response to bacterial infection, acute physical inflammation, stress, or tissue healing.",
+    "questions_for_doctor": [
+      "Could a recent infection, injury, or stress be responsible for this neutrophil elevation?",
+      "Do I need any precautions or retesting for my white blood cell levels?"
+    ],
+    "low_symptoms": [
+      "Vulnerability to bacterial infections (skin boils, sore throat, dental pain)",
+      "Unexplained fever, chills, and painful mouth sores",
+      "Slow healing of minor cuts"
+    ],
+    "high_symptoms": [
+      "Acute fever, chills, and body aches",
+      "Localized heat, swelling, redness, or pain",
+      "Sweating, fatigue, and productive cough"
+    ]
+  },
+  "absolute_lymphocyte_count": {
+    "display_name": "Absolute Lymphocyte Count (ALC)",
+    "aliases": [
+      "absolute lymphocyte count",
+      "absolute lymphocytes",
+      "absolute l",
+      "abs lymphocytes",
+      "abs lymphocyte",
+      "abs lymph",
+      "alc",
+      "alc count"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "/cumm",
+    "default_range": [
+      1000.0,
+      4000.0
+    ],
+    "description": "The total number of circulating lymphocytes (T cells, B cells, and NK cells), vital for viral defense and immunological memory.",
+    "low_explanation": "Your absolute lymphocyte count is below reference range (lymphocytopenia). This can occur during acute infections, corticosteroid therapy, or immune disorders.",
+    "high_explanation": "Your absolute lymphocyte count is elevated (lymphocytosis). Elevated lymphocytes are most commonly a natural immune response to a viral infection (such as mono, flu, or COVID).",
+    "questions_for_doctor": [
+      "Does this elevated lymphocyte count indicate a recent or active viral infection?",
+      "When should I repeat this test to check if levels have normalized?"
+    ],
+    "low_symptoms": [
+      "Frequent colds, respiratory infections, or prolonged recovery times",
+      "General fatigue and muscle weakness"
+    ],
+    "high_symptoms": [
+      "Swollen, tender lymph nodes in neck or armpits",
+      "Low-grade fever, sore throat, or body aches",
+      "Fatigue and mild night sweats"
+    ]
+  },
+  "absolute_basophil_count": {
+    "display_name": "Absolute Basophil Count (ABC)",
+    "aliases": [
+      "absolute basophil count",
+      "absolute basophils",
+      "absolute b",
+      "abs basophils",
+      "abs basophil",
+      "abs baso",
+      "abc",
+      "abc count"
+    ],
+    "category": "Complete Blood Count (CBC)",
+    "unit": "/cumm",
+    "default_range": [
+      0.0,
+      100.0
+    ],
+    "description": "The absolute count of circulating basophils, which release histamine during allergic reactions and inflammatory responses.",
+    "low_explanation": "Your absolute basophil count is within the standard low or zero range, which is completely normal physiologically.",
+    "high_explanation": "Your absolute basophil count is elevated (basophilia). This can be seen in chronic allergic conditions, inflammatory bowel conditions, or certain marrow conditions.",
+    "questions_for_doctor": [
+      "Could ongoing allergic reactions explain this basophil finding?",
+      "Should this be evaluated in tandem with other white cell subsets?"
+    ],
+    "low_symptoms": [
+      "Produces no noticeable symptoms; clinically normal"
+    ],
+    "high_symptoms": [
+      "Skin itching (pruritus), hives, or flushing",
+      "Allergic symptoms: runny nose, watery eyes, wheezing",
+      "Fatigue or feeling warm"
+    ]
+  }
+}
