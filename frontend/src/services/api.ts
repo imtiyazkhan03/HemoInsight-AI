@@ -1,6 +1,6 @@
 import { AnalysisResponse, BloodTestItem, ReportMetadata, SampleReport } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL ?? '';
+const API_BASE_URL = (import.meta.env.VITE_API_URL ?? '').replace(/\/+$/, '');
 
 async function apiFetch(path: string, options?: RequestInit): Promise<Response> {
   const url = `${API_BASE_URL}${path}`;
@@ -8,12 +8,15 @@ async function apiFetch(path: string, options?: RequestInit): Promise<Response> 
     const res = await fetch(url, options);
     return res;
   } catch (primaryErr) {
-    // If relative fetch fails, try direct 127.0.0.1:8000 fallback
-    if (!API_BASE_URL) {
+    // In local development, if relative fetch fails, try direct local port 8000 fallback
+    if (
+      !API_BASE_URL &&
+      typeof window !== 'undefined' &&
+      (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ) {
       try {
         return await fetch(`http://127.0.0.1:8000${path}`, options);
       } catch {
-        // Also try localhost:8000
         try {
           return await fetch(`http://localhost:8000${path}`, options);
         } catch {

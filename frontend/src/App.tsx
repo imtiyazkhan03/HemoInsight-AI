@@ -31,19 +31,34 @@ export function App() {
   const [isDownloadingPdf, setIsDownloadingPdf] = useState<boolean>(false);
   const [globalError, setGlobalError] = useState<string | null>(null);
 
-  // Check health and fetch samples on mount
+  // Check health and fetch samples on mount with auto-retry for cloud cold starts
   useEffect(() => {
-    const initApp = async () => {
+    let intervalId: any = null;
+
+    const checkAndLoad = async () => {
       const isOnline = await checkApiHealth();
       setIsBackendOnline(isOnline);
-      try {
-        const samples = await getSampleReports();
-        setSampleReports(samples);
-      } catch (err) {
-        console.warn('Could not fetch sample reports:', err);
+      if (isOnline) {
+        try {
+          const samples = await getSampleReports();
+          setSampleReports(samples);
+        } catch (err) {
+          console.warn('Could not fetch sample reports:', err);
+        }
+        if (intervalId) {
+          clearInterval(intervalId);
+          intervalId = null;
+        }
       }
     };
-    initApp();
+
+    checkAndLoad();
+    // Poll every 4 seconds until backend wakes up from cold sleep
+    intervalId = setInterval(checkAndLoad, 4000);
+
+    return () => {
+      if (intervalId) clearInterval(intervalId);
+    };
   }, []);
 
   const handleAnalyzeFile = async (file: File) => {

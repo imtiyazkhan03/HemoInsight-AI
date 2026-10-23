@@ -19,7 +19,7 @@ FROM python:3.11-slim AS production
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PYTHONPATH=/app \
-    PORT=8000
+    PORT=10000
 
 WORKDIR /app
 
@@ -43,8 +43,8 @@ COPY backend/ ./backend/
 # Copy compiled frontend from Stage 1 into frontend/dist
 COPY --from=frontend-builder /app/frontend/dist ./frontend/dist
 
-# Expose server port
-EXPOSE 8000
+# Expose server port (10000 is default for Render and cloud container runtimes)
+EXPOSE 10000
 
 # Start Uvicorn bound to 0.0.0.0 and dynamic $PORT
-CMD ["sh", "-c", "python -m uvicorn backend.app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+CMD ["sh", "-c", "python -m uvicorn backend.app.main:app --host 0.0.0.0 --port ${PORT:-10000}"]
