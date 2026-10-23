@@ -37,6 +37,43 @@ export async function checkApiHealth(): Promise<boolean> {
   }
 }
 
+async function extractErrorMessage(res: Response, fallback: string): Promise<string> {
+  if (res.status === 502 || res.status === 503 || res.status === 504) {
+    return `Backend server is temporarily waking up or redeploying (HTTP ${res.status}). Please wait 15–30 seconds and retry.`;
+  }
+  if (res.status === 413) {
+    return 'The uploaded file exceeds the maximum allowed upload size. Please upload a smaller file.';
+  }
+  if (res.status === 404) {
+    return 'The requested API endpoint was not found (HTTP 404). Please ensure the backend is running.';
+  }
+
+  try {
+    const errData = await res.json();
+    if (typeof errData.detail === 'string') {
+      return errData.detail;
+    }
+    if (Array.isArray(errData.detail)) {
+      return errData.detail.map((d: any) => d.msg || JSON.stringify(d)).join('; ');
+    }
+    if (errData.message) {
+      return errData.message;
+    }
+  } catch {
+    // If response was not JSON (e.g. gateway HTML or plain text)
+    try {
+      const text = await res.text();
+      if (text && text.length < 150 && !text.includes('<html') && !text.includes('<!DOCTYPE')) {
+        return text.trim();
+      }
+    } catch {
+      // ignore
+    }
+  }
+
+  return `${fallback} (HTTP ${res.status}: ${res.statusText || 'Server Error'})`;
+}
+
 export async function uploadAndAnalyzeReport(file: File): Promise<AnalysisResponse> {
   const formData = new FormData();
   formData.append('file', file);
@@ -47,13 +84,7 @@ export async function uploadAndAnalyzeReport(file: File): Promise<AnalysisRespon
   });
 
   if (!res.ok) {
-    let errorMsg = 'Failed to analyze report';
-    try {
-      const errData = await res.json();
-      errorMsg = errData.detail || errorMsg;
-    } catch {
-      // fallback
-    }
+    const errorMsg = await extractErrorMessage(res, 'Failed to analyze report');
     throw new Error(errorMsg);
   }
 
@@ -71,13 +102,7 @@ export async function verifyAndFinalizeReport(
   });
 
   if (!res.ok) {
-    let errorMsg = 'Failed to finalize report';
-    try {
-      const errData = await res.json();
-      errorMsg = errData.detail || errorMsg;
-    } catch {
-      // fallback
-    }
+    const errorMsg = await extractErrorMessage(res, 'Failed to finalize report');
     throw new Error(errorMsg);
   }
 

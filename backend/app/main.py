@@ -230,6 +230,17 @@ async def analyze_upload(
     ext = filename.split(".")[-1].lower() if "." in filename else ""
 
     allowed_exts = ["pdf", "csv", "png", "jpg", "jpeg"]
+    if ext not in allowed_exts and file.content_type:
+        mime = file.content_type.lower()
+        if "pdf" in mime:
+            ext = "pdf"
+        elif "csv" in mime or "text/plain" in mime:
+            ext = "csv"
+        elif "png" in mime:
+            ext = "png"
+        elif "jpeg" in mime or "jpg" in mime:
+            ext = "jpg"
+
     if ext not in allowed_exts:
         raise HTTPException(
             status_code=400,
