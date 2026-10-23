@@ -65,10 +65,10 @@ class OCRService:
         else:
             img = image.copy()
 
-        # If image resolution is low, upscale to at least 1600px width/height for clear small text
+        # Upscale only very low-resolution images to preserve speed and memory on cloud tiers
         w, h = img.size
-        if w < 1400 or h < 1400:
-            scale = max(1400 / w, 1400 / h)
+        if w < 700 and h < 700:
+            scale = min(max(900 / w, 900 / h), 2.0)
             new_w = int(w * scale)
             new_h = int(h * scale)
             img = img.resize((new_w, new_h), Image.Resampling.LANCZOS)

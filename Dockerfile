@@ -23,12 +23,14 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-# Install minimal OS dependencies for OCR, OpenCV, and PDF rendering
+# Install minimal OS dependencies for OCR, OpenCV, ONNX runtime, and PDF rendering
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libgl1 \
     libglib2.0-0 \
+    libgomp1 \
     tesseract-ocr \
+    tesseract-ocr-eng \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
