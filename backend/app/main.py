@@ -3,6 +3,10 @@ import io
 import json
 import logging
 from typing import List, Optional
+from dotenv import load_dotenv
+
+# Load environment variables from .env file if present
+load_dotenv()
 from fastapi import FastAPI, File, UploadFile, HTTPException, Response, Header, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
